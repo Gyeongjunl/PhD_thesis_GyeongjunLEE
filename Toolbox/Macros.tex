@@ -1,0 +1,144 @@
+% custom abstract environnment
+% =============================================================
+\newcommand\abstractname{Abstract} 
+\makeatletter
+  \newenvironment{abstract}{%
+        \medskip
+        \begin{center}%
+          {\bfseries \abstractname\vspace{-.5em}\vspace{\z@}}%
+        \end{center}%
+        \quotation
+      }
+\makeatother
+
+% custom keyword command
+% =============================================================
+\providecommand{\keywordDisplay}[1]
+{	
+\noindent \textbf{Keywords---} #1
+}
+
+% custom mathematics subject classification command
+% =============================================================
+\providecommand{\mathsubclassDisplay}[1]
+{	
+\noindent \textbf{Mathematics Subject Classification (2010)---} #1
+}
+
+
+% custom maketitle command
+% =============================================================
+\makeatletter
+
+\newcommand\custommaketitle{\par
+  \begingroup
+        \@custommaketitle
+  \endgroup
+
+}
+
+\newcommand\custommaketitlenomath{\par
+  \begingroup
+        \@custommaketitlenomath
+  \endgroup
+
+}
+
+% create affiliation
+\newcommand\affiliation[1]{\renewcommand\@affiliation{#1}}
+\newcommand\@affiliation{\@latex@error{No \noexpand\affiliation given}\@ehc}
+
+% create pubstatus
+\newcommand\pubStatus[1]{\renewcommand\@pubStatus{#1}}
+\newcommand\@pubStatus{\@latex@error{No \noexpand\pubStatus given}\@ehc}
+
+% create abstract
+\newcommand\myabstract[1]{\renewcommand\@myabstract{#1}}
+\newcommand\@myabstract{\@latex@error{No \noexpand\myabstract given}\@ehc}
+
+% create keywords
+\newcommand\keywords[1]{\renewcommand\@keywords{#1}}
+\newcommand\@keywords{\@latex@error{No \noexpand\keywords given}\@ehc}
+
+% create mathematics subject classification 
+\newcommand\mathsubclass[1]{\renewcommand\@mathsubclass{#1}}
+\newcommand\@mathsubclass{\@latex@error{No \noexpand\mathsubclass given}\@ehc}
+
+\def\@custommaketitle{%
+  % \newpage
+  \null
+  \vskip 1em%
+  \begin{center}%
+  \let \footnote \thanks
+    {\LARGE \@title \par}%
+    \vskip 1.5em%
+    {\large
+      \lineskip .5em%
+      % \begin{tabular}[t]{c}%
+        \@author
+      % \end{tabular}
+	  \par}%
+    \vskip 1em%
+  \par
+    {\large
+      \lineskip .5em%
+        \noindent \@affiliation
+	  \par}%
+    \vskip 1em%
+  \par
+    {\large
+      \lineskip .5em%
+        \noindent \@pubStatus
+	  \par}%
+    \vskip 1em%
+  \end{center}%
+  \par
+  \begin{abstract}
+     \@myabstract
+  \end{abstract}
+  \vskip 1.5em
+	\par
+	\keywordDisplay{\@keywords}
+	\par
+	\mathsubclassDisplay{\@mathsubclass}
+}
+
+\def\@custommaketitlenomath{%
+  % \newpage
+  \null
+  \vskip 1em%
+  \begin{center}%
+  \let \footnote \thanks
+    {\LARGE \@title \par}%
+    \vskip 1.5em%
+    {\large
+      \lineskip .5em%
+      % \begin{tabular}[t]{c}%
+        \@author
+      % \end{tabular}
+	  \par}%
+    \vskip 1em%
+  \par
+    {\large
+      \lineskip .5em%
+        \noindent \@affiliation
+	  \par}%
+    \vskip 1em%
+  \par
+    {\large
+      \lineskip .5em%
+        \noindent \@pubStatus
+	  \par}%
+    \vskip 1em%
+  \end{center}%
+  \par
+  \begin{abstract}
+     \@myabstract
+  \end{abstract}
+  \vskip 1.5em
+	\par
+	\keywordDisplay{\@keywords}
+}
+  
+  
+\makeatother

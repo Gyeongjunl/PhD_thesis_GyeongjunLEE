@@ -1,0 +1,29 @@
+\documentclass[11pt,a4paper,openright]{book}
+
+% preamble loading
+% ====================================================================
+\input{Toolbox/Packages}
+\input{Toolbox/Commands}
+\input{Toolbox/Macros}
+\input{Toolbox/Layout}
+\input{Toolbox/TempPackages}
+
+\addbibresource{bib_thesis.bib} %specify the reference .bib file
+
+\begin{document}
+
+	% \setcounter{minitocdepth}{3} % to change the depth of the minitoc
+	\dominitoc
+	\faketableofcontents
+
+	\chapter{Deterministic Creation and Quantum Optical Analysis of Single-Photon Emitters}
+	\label{chap:four}
+	\chaptquote{Scissors cuts paper, paper covers rock, rock crushes lizard, lizard poisons Spock, Spock smashes scissors, scissors decapitates lizard, lizard eats paper, paper disproves Spock, Spock vaporizes rock, and as it always has, rock crushes scissors}{Sheldon Cooper}
+	\chaptabstract{
+	\lipsum[7]
+	}
+	\minitoc
+	\include{Chapters/Chapter_four}
+
+
+\end{document}

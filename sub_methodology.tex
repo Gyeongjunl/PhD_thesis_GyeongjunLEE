@@ -1,0 +1,29 @@
+\documentclass[11pt,a4paper,openright]{book}
+
+% preamble loading
+% ====================================================================
+\input{Toolbox/Packages}
+\input{Toolbox/Commands}
+\input{Toolbox/Macros}
+\input{Toolbox/Layout}
+\input{Toolbox/TempPackages}
+
+\addbibresource{bib_thesis.bib} %specify the reference .bib file
+
+\begin{document}
+
+	% \setcounter{minitocdepth}{3} % to change the depth of the minitoc
+	\dominitoc
+	\faketableofcontents
+
+	\chapter{Methodology}
+	\label{chap:methodology}
+	%\chaptquote{quote}{some guy}
+	%\chaptabstract{}
+	%\lipsum[2]
+	%}
+	\minitoc
+	\include{Chapters/Chapter_methodology}
+
+
+\end{document}

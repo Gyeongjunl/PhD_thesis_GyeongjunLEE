@@ -1,0 +1,58 @@
+%!TEX root=../sub_chapter_paper.tex
+
+    
+% \title{My famous Paper}
+% \author{J. Doe$^{1}$, Co-author1$^{3,2}$}
+% \affiliation{$^1$First affiliation\\$^2$Second affiliation\\$^3$Third affiliation}
+% \pubStatus{DOI:XXXXX}
+% \myabstract{
+% \lipsum[8]
+% }
+% \keywords{Keyword 1, Keyword 2, ...}
+% \mathsubclass{XXXXX, XXXXX} % comment this line if not appropriate
+
+% \custommaketitle % use \custommaketitlenomath if \mathsubclass is not defined
+
+\section{Design and Characterization of the Micro-heater Chip} % (fold)
+\label{sec:Design and Characterization of the Micro-heater Chip}
+
+%[초반: 필요성 및 시스템의 강점]
+
+The deterministic generation of point defects in TMDs, such as sulfur vacancies, requires high thermal activation energy that exceeds the threshold for surface cleaning. While conventional furnace annealing is widely used, it necessitates the transfer of samples through ambient air, which often leads to unintended oxidation or hydrocarbon re-contamination. Furthermore, the inability to monitor the sample’s optical response during the heating process prevents precise control over defect density. To overcome these challenges, we developed an in-situ local heating system integrated directly into a cryogenic photoluminescence (PL) setup. This system allows for high-temperature annealing up to 1200 K under high vacuum ($< 10^{-6}$ Torr) while maintaining the macroscopic environment at cryogenic temperatures ($\sim$3.6 K). This localized approach ensures that the sample remains pristine and enables the immediate spectroscopic characterization of newly formed defects without any mechanical or chemical disturbance.
+
+%[중반: 마이크로 히터 구성 및 작동 원리]
+
+The core of the system is a micro-machined heating stage consisting of a suspended Silicon Carbide (SiC) membrane. SiC was selected for its exceptional thermal stability and chemical inertness at extreme temperatures. The SiC chip is mounted onto a custom-designed ceramic chip carrier, which provides both mechanical support and electrical isolation. To establish electrical connectivity, we used (ex: gold wire bonding / indium soldering) to connect the chip terminals to the carrier. This carrier is then interfaced with the cryostat's internal wiring, which leads to an external Source Measure Unit (SMU; Keithley 2400).
+
+Localized heating is achieved through the Joule effect by passing a controlled current through the SiC membrane. The suspended geometry of the membrane, with a thickness of (ex: 500 nm), effectively confines the heat to the micro-scale sample area due to the high thermal resistance of the supporting struts. We controlled the heating process by applying a constant current and simultaneously monitoring the voltage drop in a (ex: four-probe) configuration. This allowed us to monitor the membrane’s resistance in real-time, which serves as a primary indicator of the local temperature. The typical heating rate was maintained at (ex: 10 K/min) to prevent thermal shock to the hBN/TMD heterostructure.
+
+%[후반: Temperature Calibration]
+
+Since the resistance of the SiC membrane can vary depending on the device geometry and contact resistance, a rigorous temperature calibration was performed. We utilized the intrinsic temperature-dependence of the $WS_2$ neutral exciton ($X_A^0$) energy as an internal nanothermometer. By measuring the PL spectra at various global cryostat temperatures and comparing the observed peak shifts with the Varshni and Pässler models, we established a precise correlation between the membrane's electrical resistance and the actual local temperature of the TMD flake.
+
+Specifically, we found that the SiC membrane exhibits a (ex: non-linear) resistance-temperature relationship in the range of 300 K to 1200 K. The high thermal conductivity of SiC ensures that the temperature gradient between the membrane and the encapsulated $WS_2$ monolayer is minimized. This calibration allowed us to assign a specific local temperature to each annealing step with an estimated accuracy of $\pm$(ex: 10) K, providing a reliable framework for the deterministic engineering of single-photon emitters.
+
+
+% section introduction (end)
+
+\section{Temperature Calibration} % (fold)
+\label{sec:Temperature Calibration}
+
+\lipsum[2]
+
+% section first_section (end)
+
+\section{Stability and Reproducibility of Local Annealing} % (fold)
+\label{sec:Stability and Reproducibility of Local Annealing}
+
+\lipsum[2]
+
+% section second_section (end)
+
+\cite{krzakala-2010,Einstein:1905aa}
+
+% ---- bibliography
+
+\printbibliography[heading=subbibintoc]
+% \bibliographystyle{apalike}
+% \bibliography{bib_thesis}

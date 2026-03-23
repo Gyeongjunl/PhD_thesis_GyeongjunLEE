@@ -1,0 +1,31 @@
+% temps
+% ====================================================================
+\usepackage{lipsum}
+\usepackage{todonotes}
+\presetkeys{todonotes}{noline,bordercolor=black,color=white}{}
+\setlength{\marginparwidth}{2cm}
+\definecolor{PM}{RGB}{128,245,129}
+\definecolor{FK}{RGB}{169,141,201}
+\definecolor{DC}{RGB}{255,196,129}
+\definecolor{MC}{RGB}{128,209,255}
+
+%=========================================================================
+% Track Changes
+%=========================================================================
+\usepackage[normalem]{ulem}
+\usepackage{marvosym,manfnt}
+% --- change the initials corresponding to our co-authors
+\newcommand{\question}[1]{{ \color{myblue} \textbf{Question} #1}}
+\newcommand{\commentjd}[1]{{\color{myorange}[\Lightning]\emph{#1 (JD)}}}
+\newcommand{\inserteddc}[1]{{\color{myblue}#1 JD}}
+\newcommand{\modifydc}[2]{{\color{myred}\sout{#1}$\mapsto$}{\color{myblue}#2 (JD)}}
+
+% \newcommand{\comment}[1]{{\color{myorange}[\Lightning]\emph{#1}}}
+\newcommand{\deleted}[1]{{\color{myred}(remove\( \rightarrow \))#1}}
+\newcommand{\accepted}[2]{{\color{myred}\sout{#1}}{\color{mygreen}#2}}
+\newcommand{\proposed}[2]{{\color{myred}\sout{#1}}{\color{myblue}#2}}
+\newcommand{\inserted}[1]{{\color{myblue}#1}}
+
+\newcommand*{\mycolorbox}[3]{% requires xcolor package
+% \fcolorbox{#1}{#2}{\parbox{\textwidth - 6pt}{\vskip1pt \leftskip3pt\rightskip3pt #3 \vskip1pt}}}
+\fcolorbox{#1}{#2}{\parbox{\textwidth - 6pt}{\vskip1pt \leftskip3pt\rightskip3pt #3 \vskip1pt}}}

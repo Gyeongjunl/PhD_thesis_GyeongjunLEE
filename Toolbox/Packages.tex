@@ -1,0 +1,131 @@
+% typography and font
+% ====================================================================
+\usepackage[utf8]{inputenc}				% to be able to type accented characters
+\usepackage[T1]{fontenc}				% so that LaTeX is able to manage accented characters
+% \usepackage{lmodern}					% font choice
+\usepackage[french, english]{babel}		% document typographic rules
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}	% text color
+\usepackage{csquotes}					% Context sensitive quotation capabilities
+
+% figures
+% ====================================================================
+\usepackage{graphicx}				% NB: to be commented if standalone package is loaded
+\usepackage{float}					% imporve floating object management, add positioning option H
+\usepackage[font=small]{caption}	% caption options
+\usepackage{placeins}				% usage: \FloatBarrier
+\usepackage{tikz}					% drawing library
+\usetikzlibrary{shapes,arrows,shadows,patterns,pgfplots.groupplots,decorations.markings,chains,calc}
+
+
+% layout
+% ====================================================================
+\usepackage[top=30mm,bottom=30mm]{geometry}		% page dimension use the showframe option to see the different areas of the page
+\usepackage{fancyhdr}		% controls headers and footers
+\usepackage{minitoc}		% table of content for each chapter
+\usepackage{titlesec}		% customisation of section macros (titles, headers and contents)
+\usepackage{epigraph}		% chapter quote
+\usepackage{authblk} 		% footnote style & author/affiliation
+\usepackage{pdfpages}		% insert pdf file
+\setcounter{secnumdepth}{3}	% section numbering depth
+
+
+% bibliography options
+% ===============================================
+\usepackage[
+style = numeric-comp, % define both the bibliography style and the citation style
+% refsection = chapter, % This option automatically starts a new reference section at a document division such as a chapter or a section
+% bibstyle = ... to specify the bibliography style (see documentation)
+% citestyle = .... to specify the citation style (see documentation)
+sorting=none, % sorting option (here by name then year then title)
+% subentry,
+sortcites = true,% Whether or not to sort citations if multiple entry keys are passed to a citation command
+maxnames = 2, % if more authors than maxnames the list of authors is truncated to "minnames"
+minnames = 2, 
+doi=false,isbn=false, % disable printing for selected fields
+% maxbibnames = 3,
+hyperref=true, %to move back and forth between the main matter and the bibliography (needs the hyperref package to be loaded, see below)
+refsegment=chapter %alt : section
+]{biblatex}
+
+% To be used for subbibliography at the end of each chapter (optional)
+\defbibheading{subbibliography}{%
+  \section*{References for Chapter \ref{refsegment:\therefsection\therefsegment}}}
+
+% math
+% ====================================================================
+\usepackage{amsmath}		% math environments
+\usepackage{amssymb}		% math symbols
+\usepackage{bbold}			% usage: so that \mathbb{1} give an indicator function
+\usepackage{bm,bbm}			% bold in math mode
+\usepackage{cancel}			% usage: strike through terms in equation 
+\usepackage[normalem]{ulem}	% usage: strikethrough horizontaly in text mode, normalem so that \emph{} remains unchanged
+\usepackage{empheq}			% usage: box in math aligned environnemnt, left brace, ... 
+\usepackage{marvosym}
+\usepackage{manfnt}
+\usepackage{mathrsfs}
+% \usepackage{unicode-math}
+
+% tabular
+% ====================================================================
+% \usepackage{longtable}  % usage: table than span over several pages
+% \usepackage{tabularx}   % usage: [among others] tables with automatic line wrap
+\usepackage{ltablex}	  % combine <tabularx> and <longtable>
+% == tabular options
+\setlength{\tabcolsep}{6pt}			% default value - space between colums in tabular
+\renewcommand{\arraystretch}{1.2} 	% default value - space between lines in tabular
+% == end tabular options
+
+
+% Colors (official Inria colors)
+% ========================================================================
+\definecolor{myskyblue}{RGB}{81,167,249}
+\definecolor{myred}{RGB}{230,51,18} 
+\definecolor{mygrayblue}{RGB}{56,66,87} 
+\definecolor{myyellow}{RGB}{255,205,28} 
+\definecolor{mylightgreen}{RGB}{199,214,79} 
+\definecolor{mymauve}{RGB}{101,97,169}
+\definecolor{myorange}{RGB}{240,126,38} 
+\definecolor{mygreen}{RGB}{149,193,31} 
+\definecolor{myblue}{RGB}{20,136,202} 
+\definecolor{mylilas}{RGB}{155,0,79} 
+
+% theorem definition
+% ====================================================================
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}[theorem]{Lemma}
+
+
+% others
+% ====================================================================
+\usepackage{fontawesome}		% icon bank
+\usepackage{multirow}			% multi rows in table
+\usepackage{array}				% allows to set array column width
+\usepackage{siunitx}			% manage numbers and units
+% == siunitx options
+\sisetup{detect-weight = true}		% siunitx option, put text in bold if inside a bold environment
+\sisetup{range-phrase=--}			% for \SIrange{1}{10}{\second} replace "1s to 10s" by "1s -10 s"
+\sisetup{range-units=single}		% for \SIrange{1}{10}{\second} replace "1s to 10s" by "1-10 s"
+\DeclareSIUnit\molar{\textsc{M}}	% define <molar> unit
+% == end siunitx options
+\usepackage[version = 4]{mhchem}	% chemical equations
+\usepackage{xcolor}					% usage: colorbox
+
+
+
+\extrafloats{50} % number of floats that can be processed by LaTeX
+
+% hyperlinks
+% ====================================================================
+\usepackage[bookmarks,
+			plainpages=false,
+			pdfpagelabels,
+			%% pdfpagemode=FullScreen,  
+			colorlinks=true,
+			linkcolor=orange,
+			anchorcolor=gray,
+			citecolor=gray,
+			urlcolor=gray,
+			hyperindex=true,
+			breaklinks]
+			{hyperref}

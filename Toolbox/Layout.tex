@@ -1,0 +1,101 @@
+
+\pagestyle{fancy}
+
+
+% setup page number appearance
+\fancyhead[LO]{\nouppercase{\rightmark}}
+\fancyhead[RE]{\nouppercase{\leftmark}}
+\fancyhead[LE,RO]{}
+\fancyhead[C]{}
+\fancyfoot[C]{}
+\fancyfoot[LO,RE]{\thepage}
+\renewcommand{\footrulewidth}{0.4pt}
+
+
+% No number on chapter first page
+\makeatletter
+\let\ps@plain=\ps@empty
+\makeatother
+
+
+% Command to delete the header and footer of empty pages
+\newcommand{\clearemptydoublepage}{%
+\newpage{\pagestyle{empty}\cleardoublepage}}
+
+
+% redefine the cleardouble page style so that odd page preceeding new chapters are really empty
+\makeatletter
+\def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else
+ \begingroup
+  \mbox{}
+%   \vspace*{\fill}
+%   \begin{center}
+% 	This page intentionally contains only this sentence.
+%   \end{center}
+%   \vspace{\fill}
+  \thispagestyle{empty}
+\newpage
+  \if@twocolumn\mbox{}\newpage\fi
+ \endgroup\fi\fi}
+\makeatother
+
+
+
+% title format
+\titleformat{\section}{\Large \bf}{\thesection}{1em}{}
+\titleformat{\subsection}{\large \bf}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{ \normalsize \bf}{\thesubsubsection}{1em}{}
+
+%    \makeatletter
+
+%    \makeatother
+
+
+% chapter title
+\titleformat{\chapter}[display]
+{\bf\large}
+{ \MakeUppercase{\chaptertitlename} \Large\thechapter}
+{4ex}
+{
+\titlerule[1pt]
+\vspace{2ex}%
+\bf \LARGE
+}
+[\vspace{1pc}%
+{\titlerule[1pt]}]
+
+
+% chapter quote
+\setlength{\epigraphrule}{0pt}
+\setlength\epigraphwidth{8cm}
+
+\newenvironment{chaptquote}[2]{%
+\epigraph{\raggedleft \textit{#1}}{--- #2}
+}
+
+
+% chapter abstract
+\newenvironment{chaptabstract}[1]{%
+\begin{center}
+	\begin{minipage}{\textwidth}
+		\noindent #1
+	\end{minipage}
+\end{center}
+}
+
+
+% quote page
+\newenvironment{dedicationpage}[1]{%
+\thispagestyle{empty}
+\begin{center}
+	\vspace*{\fill}
+	\begin{minipage}{\textwidth}
+		\raggedleft \textit{#1}
+	\end{minipage}
+	\vspace*{\fill}
+\end{center}
+}
+
+
+
+

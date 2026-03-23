@@ -1,0 +1,35 @@
+\documentclass[11pt,a4paper,openright]{book}
+
+% preamble loading
+% ====================================================================
+\input{Toolbox/Packages}
+\input{Toolbox/Commands}
+\input{Toolbox/Macros}
+\input{Toolbox/Layout}
+\input{Toolbox/TempPackages}
+
+\addbibresource{bib_thesis.bib} %specify the reference .bib file
+
+\begin{document}
+
+% If you want to add a minitoc for introduction chapter:
+% like for other chapters you use \setcounter{minitocdepth}{3}, \dominitoc, \faketableofcontents, and \minitoc.
+% The difference is that sections, etc are starred.
+% Then you need to add the line:
+%\addcontentsline{toc}{section}{Section_Name}
+% each time you introduce a new section. The same for subsection, paragraph, etc.
+
+\markboth{}{}
+\selectlanguage{english}
+\chapter*{Introduction}
+%\chaptquote{A nice quote}{Some Author}
+\include{Chapters/Introduction_EN}
+
+
+%\markboth{}{}
+%\selectlanguage{french}
+%\chapter*{Introduction (Français)}
+%\chaptquote{Quote}{Author of the quote}
+%\include{Chapters/Introduction_FR}
+
+\end{document}
