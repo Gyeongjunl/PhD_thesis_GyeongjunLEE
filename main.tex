@@ -1,0 +1,126 @@
+
+\documentclass[11pt,a4paper,openright]{book}
+
+% preamble loading
+% ====================================================================
+\input{Toolbox/Packages}
+\input{Toolbox/Commands}
+\input{Toolbox/Macros}
+\input{Toolbox/Layout}
+\input{Toolbox/TempPackages}
+
+\addbibresource{bib_thesis.bib} %specify the reference .bib file
+
+% \includeonly{Chapters/Acknowledgements}
+
+\begin{document}
+
+\pagenumbering{roman}
+
+% ----------------------- Front page
+
+\includepdf[pages=-]{FrontLastPage/1ere.pdf} %see configuration of pdfpages package
+
+\selectlanguage{english}
+%\clearemptydoublepage
+%\dedicationpage{To my parents}
+
+%\clearemptydoublepage
+%\phantomsection
+
+\begingroup
+\let\clearpage\relax
+\chapter*{Acknowledgements}
+\include{Chapters/Acknowledgements}
+\endgroup
+
+\clearemptydoublepage
+% ------------------------------
+
+\mtcselectlanguage{english} % choose minitoc language
+\setcounter{tocdepth}{2}
+
+\dominitoc
+\tableofcontents
+
+\phantomsection
+\clearemptydoublepage
+\pagenumbering{arabic}
+
+% ======================= Introductions
+\markboth{}{}
+\selectlanguage{english}
+\addstarredchapter{Introduction (English)}
+\chapter*{Introduction (English)}
+\include{Chapters/Introduction_EN}
+
+%\markboth{}{}
+%\selectlanguage{french}
+%\addstarredchapter{Introduction (Français)}
+%\chapter*{Introduction (Français)}
+%\chaptquote{All too easy}{Darth Vader}
+%\include{Chapters/Introduction_FR}
+
+%
+\selectlanguage{english}
+\newpage
+
+% ======================= Core of the document
+% \part{Modeling of muscle contraction}
+
+\chapter{Theory}
+\label{chap:lipsum}
+\chaptquote{Always pass on what you have learned}{Yoda}
+\chaptabstract{
+\lipsum[7]
+}
+\minitoc
+\include{Chapters/Chapter_Lipsum}
+
+\chapter{Methodology}
+\label{chap:chapter_methodology}
+\chaptquote{Always pass on what you have learned}{Yoda}
+\chaptabstract{
+\lipsum[7]
+}
+\minitoc
+\include{Chapters/Chapter_methodology}
+
+\chapter{In-situ Thermal Control Platform for Deterministic Defect Engineering}
+\label{chap:chapter_three}
+\chaptquote{The people who are crazy enough to think they can change the world are the ones who do}{Steve Jobs}
+\chaptabstract{
+\lipsum[8]
+}
+\minitoc
+\include{Chapters/Chapter_three}
+
+
+\chapter{Deterministic Creation and Quantum Optical Analysis of Single-Photon Emitters}
+\label{chap:chapter_four}
+\chaptquote{The people who are crazy enough to think they can change the world are the ones who do}{Steve Jobs}
+\chaptabstract{
+\lipsum[8]
+}
+\minitoc
+\include{Chapters/Chapter_four}
+
+
+% ======================= End core of the document
+% 
+% 
+\markboth{}{}
+\addstarredchapter{Conclusions and perspectives}
+\chapter*{Conclusions and perspectives}
+\chaptquote{You can become anything if I just put my mind to it.}{Jalira, Master Polymorphist}
+\include{Chapters/Conclusions}
+
+
+\printbibliography[heading=bibintoc]
+
+% ----------------------- back cover
+\markboth{}{}
+\AtEndDocument{\includepdf[pages=-,openright]{FrontLastPage/4eme.pdf}}
+
+
+\end{document}
