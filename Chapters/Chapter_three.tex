@@ -136,34 +136,39 @@ By combining cryostat-based temperature control at low temperatures and micro-he
 
 \subsection{Local Temperature Estimation Using Exciton Energy}
 
-Having established the exciton emission energy as a temperature indicator, we applied this calibration to monitor the local temperature during in-situ annealing of hBN-encapsulated WS$_2$ monolayers.
+Having established the exciton emission energy as a temperature indicator, we apply this calibration to estimate the local temperature during in-situ annealing of hBN-encapsulated WS$_2$ monolayers.
 
-In practice, the electrical current applied to the micro-heater is gradually increased while simultaneously recording the PL spectrum. The evolution of the neutral exciton ($X_A^0$) energy is monitored in real time. Fig.~\ref{fig:pl_evolution}(a) shows the evolution of PL with increasing temperature. Because of bandgap renormalization at higher temperature, the position of exciton emission is moving to lower energy (red-shift). By monitoring the position of the peak we can estimate temperature using Pässler's model (Fig.~\ref{fig:pl_evolution}(b)). The PL spectra remain well-defined up to temperatures of approximately 925~K. A continuous redshift of the exciton energy is observed as the heating current is increased, demonstrating that the exciton energy can be used to track the local temperature during in-situ annealing.
+In practice, the electrical current supplied to the micro-heater is gradually increased while simultaneously recording the PL spectrum. The evolution of the neutral exciton ($X_A^0$) energy is monitored in real time. As shown in Fig.~\ref{fig:pl_evolution}(a), the PL spectrum exhibits a continuous redshift with increasing heating current. This behavior originates from bandgap renormalization induced by electron--phonon interactions at elevated temperatures.
 
-However, as shown in Fig.~\ref{fig:pl_evolution}(c), at elevated temperatures, the PL intensity decreases significantly, making it difficult to reliably extract the exciton energy. This sets an upper limit to the temperature range over which exciton-based thermometry can be applied. In this regime, alternative methods are required for temperature estimation.
+By tracking the exciton peak position and using the previously established Pässler model, the local temperature of the sample can be extracted (Fig.~\ref{fig:pl_evolution}(b)). The PL spectra remain well-defined up to temperatures of approximately 925~K, allowing reliable extraction of the exciton energy over a broad temperature range. The continuous redshift observed with increasing current confirms that the exciton energy can be used to monitor the local temperature during in-situ annealing.
+
+However, as shown in Fig.~\ref{fig:pl_evolution}(c), the PL intensity decreases significantly at elevated temperatures, which limits the reliable extraction of the exciton peak position. This sets an upper bound to the temperature range accessible using exciton-based thermometry.
 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=\textwidth]{Figure/Chapter_three/pl_evolution.png}
-	\caption{(a) Evolution of the PL spectrum of a WS$_2$ monolayer from 7.8 K to 925 K. (b) Temperature dependence of the neutral exciton ($X_A^0$) energy obtained from PL, along with the Pässler model fit. (c) Temperature dependence of integrated PL intensity}
+	\caption{(a) Evolution of the PL spectrum of a WS$_2$ monolayer from 7.8 K to 925 K. (b) Temperature dependence of the neutral exciton ($X_A^0$) energy obtained from PL, along with the Pässler model fit. (c) Temperature dependence of the integrated PL intensity.}
 	\label{fig:pl_evolution}
 \end{figure}
 
-\subsection{Complementary Temperature Estimation Using Black Body Radiation}
+\subsection{Complementary Temperature Estimation Using Blackbody Radiation}
 
-At elevated temperatures above approximately 900 K, the PL intensity decreases significantly, and blackbody radiation begins to dominate the optical signal. In this regime, the excitonic emission can no longer be reliably resolved. Instead, the thermal emission spectrum was used as an alternative temperature indicator. By analyzing the blackbody radiation, the temperature of the micro-heater was independently estimated, enabling calibration in the high-temperature regime.
-Fig.~\ref{fig:blackbody} presents the blackbody radiation emitted by the membrane, which provides an extended temperature calibration at elevated temperatures. The blackbody spectra are fitted, after being corrected by the spectral response of the setup, using Planck's law:
+At temperatures above approximately 900~K, the PL intensity is strongly reduced and thermal emission from the membrane begins to dominate the optical signal. In this regime, the excitonic emission can no longer be reliably resolved, and an alternative temperature estimation method is required.
+
+To overcome this limitation, the thermal emission spectrum of the membrane is analyzed. Fig.~\ref{fig:blackbody} shows the measured blackbody radiation at elevated temperatures. The spectra are fitted, after correction for the spectral response of the detection system, using a modified form of Planck's law:
 
 \begin{equation}
 B(\nu, T) = A \frac{(h\nu)^2}{e^{h\nu / k_B T} - 1}
 \end{equation}
 
-where $A$ is a proportionality constant that accounts for the spectral response of the detection system, corrected by an independently measured efficiency curve. At 925~K (determined from the exciton position), the blackbody fit yields $924 \pm 3.4$~K—a discrepancy of less than 1~K—confirming excellent agreement between the two thermometers at the crossover temperature.
+where $A$ is a proportionality constant accounting for the overall detection efficiency.
+
+At 925~K, where both the exciton emission and blackbody radiation are observable, the temperature extracted from the blackbody fit is $924 \pm 3.4$~K. This value is in excellent agreement with the temperature obtained from the exciton energy, with a discrepancy below 1~K. This consistency validates the use of both methods and ensures reliable temperature estimation across a wide temperature range.
 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=\textwidth]{Figure/Chapter_three/blackbody.png}
-	\caption{Blackbody radiation spectra of the suspended membrane used for extended temperature calibration at high temperatures. The spectra are fitted using Planck's law. (a)From 896 K to 1056 K, (b) from 1092 K to 1211 K}
+	\caption{Blackbody radiation spectra of the suspended membrane used for high-temperature calibration. The spectra are fitted using a modified Planck's law. (a) From 896 K to 1056 K. (b) From 1092 K to 1211 K.}
 	\label{fig:blackbody}
 \end{figure}
 
