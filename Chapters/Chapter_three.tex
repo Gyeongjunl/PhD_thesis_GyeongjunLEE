@@ -13,34 +13,147 @@
 
 % \custommaketitle % use \custommaketitlenomath if \mathsubclass is not defined
 
-\section{Design and Characterization of the Micro-heater Chip} % (fold)
+\section{In-situ Thermal Annealing Platform}
+\label{sec:In-situ Thermal Annealing Platform}
+
+The deterministic generation of point defects in TMDs, such as sulfur vacancies, requires high thermal activation energy \cite{noh-2014,komsa-2015}. While conventional furnace annealing is widely used, it necessitates transferring samples through ambient conditions, which can lead to unintended oxidation or hydrocarbon re-contamination. Furthermore, the lack of in-situ optical monitoring during thermal treatment prevents precise control over defect density.
+
+To overcome these challenges, we developed an in-situ local heating system integrated into a cryogenic photoluminescence (PL) setup. This system enables localized high-temperature annealing up to 1200~K under high vacuum ($<10^{-6}$~Torr), while maintaining the surrounding environment at cryogenic temperatures ($\sim$3.6~K).
+
+Fig.~\ref{fig:annealing}(a) shows a photograph of the sample mounted inside the cryostat in front of a 50$\times$ objective. Fig.~\ref{fig:annealing}(b) illustrates the in-situ thermal annealing process. The system is based on a micro-heater chip that enables localized heating of the sample by applying an electrical current. The sample is placed directly on the chip, allowing controlled thermal annealing while maintaining the surrounding cryogenic environment.
+
+During annealing, photoluminescence measurements can be performed simultaneously. Owing to the localized heating, the temperature of the cryostat remains low, enabling rapid cooling of the sample back to cryogenic temperature by simply switching off the current. This annealing and cooling sequence, together with optical measurements, is repeated at each target annealing temperature.
+
+This approach minimizes contamination and enables immediate spectroscopic characterization of newly formed defects without exposure to ambient conditions.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=\textwidth]{Figure/Chapter_three/annealing.png}
+	\caption{(a) Photograph of the sample mounted inside the cryostat. (b) Schematic illustration of the in-situ thermal annealing process, where localized heating is applied to the sample while maintaining the surrounding cryogenic environment.}
+	\label{fig:annealing}
+\end{figure}
+
+
+
+\section{Design and Characterization of the Micro-heater Chip}
 \label{sec:Design and Characterization of the Micro-heater Chip}
 
-%[초반: 필요성 및 시스템의 강점]
+The core of the in-situ thermal annealing platform is based on localized heating, which is enabled by a micro-heater chip. The micro-heater chips used in this work are commercial devices (EDEN Instruments) designed for localized heating applications, including transmission electron microscopy (TEM). The chip features a central region with an array of holes, allowing both thermal isolation and compatibility with optical and electron-beam measurements.
 
-The deterministic generation of point defects in TMDs, such as sulfur vacancies, requires high thermal activation energy that exceeds the threshold for surface cleaning. While conventional furnace annealing is widely used, it necessitates the transfer of samples through ambient air, which often leads to unintended oxidation or hydrocarbon re-contamination. Furthermore, the inability to monitor the sample’s optical response during the heating process prevents precise control over defect density. To overcome these challenges, we developed an in-situ local heating system integrated directly into a cryogenic photoluminescence (PL) setup. This system allows for high-temperature annealing up to 1200 K under high vacuum ($< 10^{-6}$ Torr) while maintaining the macroscopic environment at cryogenic temperatures ($\sim$3.6 K). This localized approach ensures that the sample remains pristine and enables the immediate spectroscopic characterization of newly formed defects without any mechanical or chemical disturbance.
+The chips are pre-calibrated by the manufacturer under secondary vacuum conditions at room temperature. As a result, calibration data relating temperature, electrical current, and resistance are provided together with the device.
 
-%[중반: 마이크로 히터 구성 및 작동 원리]
+Within the chip, a SiC membrane is suspended between two doped silicon contacts. Each contact is connected to external circuitry through gold electrodes on both sides. SiC was selected for its exceptional thermal stability and chemical inertness at elevated temperatures \cite{casady-1996,kimoto-2022}.
 
-The core of the system is a micro-machined heating stage consisting of a suspended Silicon Carbide (SiC) membrane. SiC was selected for its exceptional thermal stability and chemical inertness at extreme temperatures. The SiC chip is mounted onto a custom-designed ceramic chip carrier, which provides both mechanical support and electrical isolation. To establish electrical connectivity, we used (ex: gold wire bonding / indium soldering) to connect the chip terminals to the carrier. This carrier is then interfaced with the cryostat's internal wiring, which leads to an external Source Measure Unit (SMU; Keithley 2400).
+As illustrated in Fig.~\ref{fig:micro_heater}(a), the SiC membrane is resistive and undergoes localized heating when an electrical current is applied via Joule heating. An optical image of the chip is shown in Fig.~\ref{fig:micro_heater}(b).
 
-Localized heating is achieved through the Joule effect by passing a controlled current through the SiC membrane. The suspended geometry of the membrane, with a thickness of (ex: 500 nm), effectively confines the heat to the micro-scale sample area due to the high thermal resistance of the supporting struts. We controlled the heating process by applying a constant current and simultaneously monitoring the voltage drop in a (ex: four-probe) configuration. This allowed us to monitor the membrane’s resistance in real-time, which serves as a primary indicator of the local temperature. The typical heating rate was maintained at (ex: 10 K/min) to prevent thermal shock to the hBN/TMD heterostructure.
+The suspended membrane geometry provides high thermal resistance, effectively confining the heat to the central region where the sample is located. As the chip is calibrated at the center of the membrane, the temperature distribution is uniform in the central region around the array of holes, as shown in Fig.~\ref{fig:micro_heater}(c). In addition, blackbody radiation from the membrane is observed at temperatures around 1000$^\circ$C (Fig.~\ref{fig:micro_heater}(d)).
 
-%[후반: Temperature Calibration]
+The heating process is controlled by applying a constant current while monitoring the corresponding voltage drop, allowing real-time tracking of the membrane resistance. The heating rate is carefully adjusted to avoid thermal stress in the hBN/TMD heterostructure.
 
-Since the resistance of the SiC membrane can vary depending on the device geometry and contact resistance, a rigorous temperature calibration was performed. We utilized the intrinsic temperature-dependence of the $WS_2$ neutral exciton ($X_A^0$) energy as an internal nanothermometer. By measuring the PL spectra at various global cryostat temperatures and comparing the observed peak shifts with the Varshni and Pässler models, we established a precise correlation between the membrane's electrical resistance and the actual local temperature of the TMD flake.
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=\textwidth]{Figure/Chapter_three/micro_heater.png}
+	\caption{(a) Schematic of the micro-heater chip illustrating localized heating driven by Joule heating. (b) Optical image of the chip (5$\times$ magnification). (c) Thermal image of the SiC heater showing uniform temperature distribution (provided by the manufacturer). (d) Optical image of blackbody radiation emitted from the SiC heater at temperatures around 1000$^\circ$C.}
+	\label{fig:micro_heater}
+\end{figure}
 
-Specifically, we found that the SiC membrane exhibits a (ex: non-linear) resistance-temperature relationship in the range of 300 K to 1200 K. The high thermal conductivity of SiC ensures that the temperature gradient between the membrane and the encapsulated $WS_2$ monolayer is minimized. This calibration allowed us to assign a specific local temperature to each annealing step with an estimated accuracy of $\pm$(ex: 10) K, providing a reliable framework for the deterministic engineering of single-photon emitters.
+The SiC chip is mounted onto a custom-designed ceramic sample holder (Fig.~\ref{fig:heater_connection}(a)), which provides both mechanical support and electrical connectivity. Direct handling of the micro-heater chip with tweezers can easily damage the suspended membrane due to its mechanical fragility.
+
+The mounting and bonding steps require careful handling. However, once the chip is securely attached to the holder and electrical connections are established, the assembly enables safe handling without direct contact with the fragile membrane. In practice, keeping the chip mounted on the holder facilitates reliable storage and repeated measurements.
+
+In addition, the holder enables straightforward mounting and removal of the chip. The sample can be installed by inserting the copper support of the holder into the corresponding connector inside the cryostat, as shown in Fig.~\ref{fig:heater_connection}(b). Electrical connections between the chip terminals and the holder are established using aluminum wire bonding. This assembly is then interfaced with the internal wiring of the cryostat, which is connected to an external source-measure unit (SMU; Keithley 2400).
+
+This configuration allows precise control of the electrical current supplied to the heater, while simultaneously monitoring the corresponding voltage and resistance. Overall, the ceramic holder provides reliable electrical interfacing while improving mechanical stability and handling.
+
+Finally, after installation, the cryostat is sealed with a protective cover (Fig.~\ref{fig:heater_connection}(c)), enabling optical measurements under well-controlled thermal conditions at cryogenic temperatures.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=\textwidth]{Figure/Chapter_three/heater_connection.png}
+	\caption{(a) Micro-heater chip mounted on a custom-designed ceramic sample holder. (b) Sample holder installed inside the cryostat in front of the objective. (c) Cryostat with the protective cover closed, enclosing the objective and electrical connections.}
+	\label{fig:heater_connection}
+\end{figure}
+
 
 
 % section introduction (end)
 
-\section{Temperature Calibration} % (fold)
+\section{Temperature Calibration}
 \label{sec:Temperature Calibration}
 
-\lipsum[2]
+Precise temperature control is essential for correlating annealing conditions with defect formation. In particular, it is necessary to determine the temperature at which defect-related phenomena emerge.
 
-% section first_section (end)
+As discussed in Sec.~\ref{sec:Design and Characterization of the Micro-heater Chip}, the micro-heater chip is pre-calibrated by the manufacturer under vacuum conditions at room temperature. Under these conditions, the temperature can be accurately controlled based on the provided calibration data, which relates electrical current, voltage, and resistance to temperature.
+
+However, in the present system, the micro-heater chip is integrated into a cryogenic environment. During operation, the chip is locally heated while the surrounding cryostat remains at low temperature. In this configuration, the manufacturer-provided calibration is no longer directly applicable, and the actual temperature of the sample cannot be reliably determined from electrical parameters alone.
+
+Therefore, an independent calibration method is required to establish a reliable temperature scale under experimental conditions. To this end, we introduce an alternative temperature indicator that remains valid across a wide temperature range and is directly linked to the sample itself.
+
+\subsection{Temnperature Calibration Based on Exciton Emission Energy}
+
+To address this, we employ an optical method based on photoluminescence (PL) spectroscopy. Monolayer TMDs such as WS$_2$ exhibit strong light emission due to their direct bandgap electronic structure, enabling precise tracking of their emission energy.
+
+The emission energy of the neutral exciton ($X_A^0$) is strongly dependent on temperature. This dependence originates from temperature-induced bandgap renormalization in semiconductors, primarily driven by electron--phonon interactions. As the temperature increases, the bandgap decreases, resulting in a redshift of the PL emission. This well-defined energy shift allows the exciton emission to serve as a reliable indicator of the local temperature.
+
+This temperature dependence of the exciton energy can be described using an analytical model known as the Pässler model:
+
+\begin{equation}
+E_g(T) = E_g(0) - \frac{\alpha \Theta}{2}
+\left[
+\sqrt[p]{1 + \left(\frac{2T}{\Theta}\right)^p} - 1
+\right]
+\end{equation}
+
+where the parameters for an encapsulated sample were determined in \cite{nagler-2018} and are given by $E_g(0) \approx 2.063\,\mathrm{eV}$, $\alpha \approx 3.47 \times 10^{-4}\,\mathrm{eV/K}$, $\Theta \approx 200.89\,\mathrm{K}$, and $p \approx 2.35$.
+
+Fig.~\ref{fig:calibration_rt} shows the evolution of the PL spectrum of a WS$_2$ monolayer with increasing temperature under vacuum conditions. At room temperature, the PL spectrum consists of one or two dominant peaks corresponding to the neutral exciton and the negatively charged exciton, enabling straightforward tracking of the exciton emission energy.
+
+As the temperature increases, a clear redshift of the exciton energy is observed (Fig.~\ref{fig:calibration_rt}(a)). The measured energy shift is in excellent agreement with the Pässler model, as shown in Fig.~\ref{fig:calibration_rt}(b). In addition, a shift of approximately 19 meV is attributed to the difference in exciton binding energy between encapsulated and non-encapsulated monolayers \cite{raja-2017,cadiz-2017}.
+
+From these calibration results, a direct relationship between temperature and exciton emission energy is established. Consequently, the exciton energy can be used to estimate the local temperature of the emitter, in this case a monolayer TMD.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=\textwidth]{Figure/Chapter_three/calibration_rt.png}
+	\caption{(a) Evolution of the PL spectrum of a WS$_2$ monolayer from 25$^\circ$C (300 K) to 500$^\circ$C (773 K). (b) Temperature dependence of the neutral exciton ($X_A^0$) energy and its fit using the Pässler model.}
+	\label{fig:calibration_rt}
+\end{figure}
+
+To further validate this approach over a wide temperature range, additional measurements were performed in a cryostat at temperatures below room temperature. In encapsulated WS$_2$ monolayers, the neutral exciton emission is significantly suppressed at low temperatures due to the presence of a lower-energy dark excitonic state arising from spin--valley coupling in the band structure. Furthermore, in non-encapsulated WS$_2$ monolayers, dielectric disorder in the surrounding environment leads to a PL spectrum containing multiple excitonic complexes that cannot be clearly identified. As a result, direct PL measurements become less reliable in this regime.
+
+To overcome this limitation, photoluminescence excitation (PLE) spectroscopy was employed. By tuning the excitation energy and probing the absorption resonance, both A and B exciton resonances could be reliably tracked over the temperature range from 3 K to 300 K using the cryostat temperature control system. The evolution of the PLE spectra is shown in Fig.~\ref{fig:calibration_PLE}. The extracted exciton energies from PLE measurements are also in good agreement with the Pässler model.
+
+When comparing PL and PLE at 300 K, only a small energy difference of a few meV is observed, which can be attributed to the Stokes shift.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=\textwidth]{Figure/Chapter_three/calibration_PLE.png}
+	\caption{(a) Evolution of the PLE spectrum of a WS$_2$ monolayer from 3 K to 300 K. (b) Temperature dependence of the neutral exciton ($X_A^0$) energy obtained from PL and PLE measurements, along with the Pässler model fit.}
+	\label{fig:calibration_PLE}
+\end{figure}
+
+By combining cryostat-based temperature control at low temperatures and micro-heater-induced local heating at higher temperatures, the exciton energy was tracked over a broad temperature range, confirming its robustness as a temperature indicator.
+
+\subsection{Local Temperature Estimation Using Exciton Energy}
+
+Having established exciton emission energy as a temperature indicator, we now use it to estimate the local temperature during in-situ annealing in a cryogenic condition.
+
+In practice, the electrical current applied to the micro-heater is gradually increased while simultaneously recording the PL spectrum. The evolution of the neutral exciton ($X_A^0$) energy is monitored in real time. Using the previously established relationship between exciton energy and temperature, the measured exciton energy is converted into the corresponding local temperature of the sample.
+
+We first applied this approach to non-encapsulated WS$_2$ monolayers over a broad annealing range. However, at elevated temperatures, the PL intensity decreases significantly, making it difficult to reliably extract the exciton energy.
+
+More robust measurements were obtained using hBN-encapsulated WS$_2$ monolayers. In this case, the PL spectra remain well-defined up to temperatures of approximately 925 K. A continuous redshift of the exciton energy is observed as the heating current is increased, demonstrating that the exciton energy can be used to track the local temperature during in-situ annealing.
+
+At higher temperatures, the PL intensity is strongly reduced and thermal emission begins to dominate the optical signal. This sets an upper limit to the temperature range over which exciton-based thermometry can be applied. In this regime, alternative methods, such as blackbody radiation analysis, are required for temperature estimation.
+
+
+
+
+
+
+
+
+
 
 \section{Stability and Reproducibility of Local Annealing} % (fold)
 \label{sec:Stability and Reproducibility of Local Annealing}
