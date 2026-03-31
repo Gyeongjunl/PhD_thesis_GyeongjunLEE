@@ -153,7 +153,7 @@ However, as shown in Fig.~\ref{fig:pl_evolution}(c), the PL intensity decreases 
 	\label{fig:pl_evolution}
 \end{figure}
 
-\subsection{Complementary Temperature Estimation Using Blackbody Radiation}
+\subsection{Complementary Temperature Estimation: Blackbody Radiation}
 
 At temperatures above approximately 900~K, the PL intensity is strongly reduced and thermal emission from the membrane begins to dominate the optical signal. In this regime, the excitonic emission can no longer be reliably resolved, and an alternative temperature estimation method is required.
 
@@ -174,15 +174,73 @@ At 925~K, where both the exciton emission and blackbody radiation are observable
 	\label{fig:blackbody}
 \end{figure}
 
+\subsection{Temperature Calibration Using Raman Spectroscopy}
+
+As an independent approach, temperature determination was performed using Raman spectroscopy on non-encapsulated WS$_2$ monolayers. This method complements exciton-based and blackbody-based thermometry, improving the overall robustness of the temperature determination.
+
+The Raman measurements were carried out under vacuum conditions using a pre-calibrated micro-heater chip. The temperature of the sample was controlled using the manufacturer-provided electrical parameters, which relate the applied current, voltage, and resistance to temperature. Raman spectra were recorded at each set temperature.
+
+The Raman spectra were acquired using a 514.5~nm continuous-wave laser. The excitation beam was spectrally filtered using a reflective volume Bragg bandpass filter, and the scattered light was collected through two notch filters centered at the laser wavelength. This configuration enables simultaneous detection of both Stokes and anti-Stokes signals.
+
+In principle, the ratio between anti-Stokes and Stokes intensities can be used to determine the temperature. However, in practice, this ratio is strongly affected by the spectral response of the optical components, making reliable quantitative analysis difficult. Fig.~\ref{fig:raman_RT} shows the Raman spectrum measured at 25$^\circ$C. Both the E$_{2g}$ (in-plane) and A$_{1g}$ (out-of-plane) modes are observed in the Stokes and anti-Stokes regions. However, the anti-Stokes signals are significantly affected by the optical response of the setup, leading to distortions in peak intensities. As a result, the ratio between Stokes and anti-Stokes peaks is not reliable in this measurement.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=\textwidth]{Figure/Chapter_three/raman_RT.png}
+	\caption{Raman spectrum of a monolayer WS$_2$ measured in vacuum at 25$^\circ$C, showing both Stokes and anti-Stokes regions.}
+	\label{fig:raman_RT}
+\end{figure}
+
+Fig.~\ref{fig:raman} shows the evolution of the Raman spectra from 25$^\circ$C to 1000$^\circ$C under vacuum conditions. With increasing temperature, the Raman peak intensities gradually decrease and eventually vanish at 1000$^\circ$C (1273~K), indicating thermal dissociation of the WS$_2$ monolayer. These results indicate that annealing can be safely performed at temperatures below 1000$^\circ$C.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=\textwidth]{Figure/Chapter_three/raman.png}
+	\caption{Temperature-dependent Raman spectra of a monolayer WS$_2$ measured in vacuum. (a) 25$^\circ$C to 300$^\circ$C, (b) 350$^\circ$C to 650$^\circ$C, (c) 700$^\circ$C to 1000$^\circ$C.}
+	\label{fig:raman}
+\end{figure}
+
+In addition to the intensity reduction, both Raman peak positions exhibit a redshift with increasing temperature. Fig.~\ref{fig:raman_fit} shows the temperature dependence of the A$_{1g}$ mode in both Stokes and anti-Stokes regions (absolute values). The position of the A$_{1g}$ mode is extracted as a function of temperature, showing a linear dependence with a slope of approximately $-0.0134~\mathrm{cm^{-1}/K}$. This value is consistent with previously reported results, where a slope of approximately $-0.0121~\mathrm{cm^{-1}/K}$ was obtained in the temperature range from 100~K to 600~K \cite{huang-2016}. The agreement confirms the reliability of the temperature determination and extends the validation to higher temperatures.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.6\textwidth]{Figure/Chapter_three/raman_fit.png}
+	\caption{Temperature dependence of the A$_{1g}$ Raman mode position in both Stokes and anti-Stokes regions, showing a linear redshift with increasing temperature.}
+	\label{fig:raman_fit}
+\end{figure}
+
+For completeness, Fig.~\ref{fig:dissociation}(a) shows an optical image of the sample before annealing. After annealing up to 1200$^\circ$C, the flake is no longer visible (Fig.~\ref{fig:dissociation}(b)). The absence of Raman features above 1000$^\circ$C further confirms that the WS$_2$ monolayer undergoes thermal dissociation around this temperature.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=\textwidth]{Figure/Chapter_three/dissociation.png}
+	\caption{Optical image of a non-encapsulated WS$_2$ monolayer on the membrane (a) before annealing and (b) after annealing up to 1200$^\circ$C.}
+	\label{fig:dissociation}
+\end{figure}
+
+
+\section{Stability and Reproducibility of Local Annealing}
+
+To ensure reliable optical measurements during repeated annealing cycles, the mechanical stability of the micro-heater membrane was evaluated.
+
+Fig.~\ref{fig:membrane_shift} shows optical images of the SiC membrane under white light illumination at 1000$^\circ$C and after cooling back to room temperature. The red circle indicates the initial position of the central hole of the membrane.
+
+After thermal cycling, only a negligible lateral displacement (sub-$\mu$m) is observed. This demonstrates the high mechanical stability of the membrane under repeated heating and cooling.
+
+This stability ensures that optical measurements can be performed at the same spatial location on the sample throughout multiple annealing cycles, which is essential for tracking the evolution of defect-related emission.
+
+The difference in apparent color between the two images originates from visible blackbody radiation at elevated temperature.
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=\textwidth]{Figure/Chapter_three/dissociation.png}
+	\caption{Optical images of the SiC membrane under white light illumination at (a) 1000$^\circ$C and (b) after cooling to room temperature. The red circle indicates the reference position of the membrane center. A negligible lateral displacement (sub-$\mu$m) is observed after thermal cycling.}
+	\label{fig:hole_position}
+\end{figure}
 
 
 
-\section{Stability and Reproducibility of Local Annealing} % (fold)
-\label{sec:Stability and Reproducibility of Local Annealing}
-dd
-stability
 
-\cite{krzakala-2010,Einstein:1905aa}
+% \cite{krzakala-2010,Einstein:1905aa}
 
 % ---- bibliography
 
