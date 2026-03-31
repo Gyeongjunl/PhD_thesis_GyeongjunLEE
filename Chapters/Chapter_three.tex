@@ -26,6 +26,8 @@ During annealing, photoluminescence measurements can be performed simultaneously
 
 This approach minimizes contamination and enables immediate spectroscopic characterization of newly formed defects without exposure to ambient conditions.
 
+Each annealing step follows a standardized protocol: the current is increased gradually in small steps to the target value to avoid thermal shock to the sample, held for 30 minutes to allow the system to reach a stable state, and then reduced slowly back to zero. After cooling to the base temperature of the cryostat, PL measurements are performed at the same spatial position. This sequence is repeated at each target annealing temperature, allowing the optical response to be tracked systematically as a function of thermal treatment.
+
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=\textwidth]{Figure/Chapter_three/annealing.png}
@@ -135,10 +137,10 @@ When comparing PL and PLE at 300 K, only a small energy difference of a few meV 
 By combining cryostat-based temperature control at low temperatures and micro-heater-induced local heating at higher temperatures, the exciton energy was tracked over a broad temperature range, confirming its robustness as a temperature indicator.
 
 \subsection{Local Temperature Estimation Using Exciton Energy}
+ 
+Having established the exciton emission energy as a reliable temperature indicator, we use this calibration to estimate the local temperature during in-situ annealing of hBN-encapsulated WS$_2$ monolayers.
 
-Having established the exciton emission energy as a temperature indicator, we apply this calibration to estimate the local temperature during in-situ annealing of hBN-encapsulated WS$_2$ monolayers.
-
-In practice, the electrical current supplied to the micro-heater is gradually increased while simultaneously recording the PL spectrum. The evolution of the neutral exciton ($X_A^0$) energy is monitored in real time. As shown in Fig.~\ref{fig:pl_evolution}(a), the PL spectrum exhibits a continuous redshift with increasing flowing current. This behavior originates from bandgap renormalization induced by electron--phonon interactions at elevated temperatures.
+In practice, the electrical current supplied to the micro-heater is gradually increased while simultaneously recording the PL spectrum. The evolution of the neutral exciton ($X_A^0$) energy is monitored in real time. As shown in Fig.~\ref{fig:pl_evolution}(a), the PL spectrum exhibits a continuous redshift with increasing current. 
 
 By tracking the exciton peak position and using the previously established Pässler model, the local temperature of the sample can be extracted (Fig.~\ref{fig:pl_evolution}(b)). The PL spectra remain well-defined up to temperatures of approximately 925~K, allowing reliable extraction of the exciton energy over a broad temperature range. The continuous redshift observed with increasing current confirms that the exciton energy can be used to monitor the local temperature during in-situ annealing.
 
@@ -155,7 +157,7 @@ However, as shown in Fig.~\ref{fig:pl_evolution}(c), the PL intensity decreases 
 
 At temperatures above approximately 900~K, the PL intensity is strongly reduced and thermal emission from the membrane begins to dominate the optical signal. In this regime, the excitonic emission can no longer be reliably resolved, and an alternative temperature estimation method is required.
 
-To overcome this limitation, the thermal emission spectrum of the membrane is analyzed. Fig.~\ref{fig:blackbody} shows the measured blackbody radiation at elevated temperatures. The spectra are fitted, after correction for the spectral response of the detection system, using a modified form of Planck's law:
+To extend the calibration to higher temperatures, the thermal emission spectrum of the membrane is analyzed. Fig.~\ref{fig:blackbody} shows the measured blackbody radiation at elevated temperatures. The spectra are fitted, after correction for the spectral response of the detection system, using a modified form of Planck's law:
 
 \begin{equation}
 B(\nu, T) = A \frac{(h\nu)^2}{e^{h\nu / k_B T} - 1}
