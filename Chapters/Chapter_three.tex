@@ -13,8 +13,19 @@
 
 % \custommaketitle % use \custommaketitlenomath if \mathsubclass is not defined
 
+\section{Motivation: Limitations of Conventional Annealing Approaches}
+\label{sec:Motivation: Limitations of Conventional Annealing Approaches}
+
+The controlled generation of chalcogen vacancies in monolayer TMDs requires elevated temperatures, typically on the order of several hundred to above 500~K in monolayer MoS$_2$ \cite{mitterreiter2021role}, due to the high formation energy of chalcogen vacancies \cite{komsa-2015,hong-2015}. A variety of strategies have been explored to achieve this goal, each with distinct trade-offs in terms of spatial control, optical accessibility, and sample integrity. Understanding these trade-offs motivates the specific design choices made in this work.
+
+A straightforward approach to thermally activate chalcogen vacancies is to extend the vacuum annealing system described in Chapter~\ref{chap:methodology} to higher temperatures. In this scheme, the sample is annealed inside the vacuum chamber and subsequently transferred to the cryostat for low-temperature optical characterization. Despite its simplicity, this approach carries a fundamental drawback: every annealing--characterization cycle requires physically moving the sample between the two systems, each transfer taking several hours. This not only exposes the sample to ambient air at every step, but also forces remounting in the cryostat, introducing positional uncertainties that prevent tracking the optical response at the same spatial location across successive annealing temperatures. Cooling the cryostat back to base temperature after each remounting adds a further delay of ten hours or more, making a systematic temperature-dependent study across many annealing steps prohibitively time-consuming in practice.
+
+The approach developed in this work addresses all of these limitations simultaneously. By integrating a micro-heater chip directly inside a cryogenic $\mu$PL setup, annealing and optical characterization are performed in the same vacuum environment, at the same spatial position, without any sample transfer. This enables a direct comparison of different approaches in terms of spatial control, optical accessibility, and sample integrity.
+
 \section{In-situ Thermal Annealing Platform}
 \label{sec:In-situ Thermal Annealing Platform}
+
+The deterministic generation of point defects in TMDs, such as sulfur vacancies in monolayer WS$_2$, requires high thermal activation energy \cite{noh-2014,komsa-2015}. First-principles calculations calculations estimate vacancy formation energies on the order of several eV, necessitating annealing temperatures well above 900
 
 The deterministic generation of point defects in TMDs, such as sulfur vacancies, requires high thermal activation energy \cite{noh-2014,komsa-2015}. While conventional furnace annealing is widely used, it necessitates transferring samples through ambient conditions, which can lead to unintended oxidation or hydrocarbon re-contamination. Furthermore, the lack of in-situ optical monitoring during thermal treatment prevents precise control over defect density.
 
