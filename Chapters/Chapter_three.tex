@@ -16,24 +16,20 @@
 \section{Motivation: Limitations of Conventional Annealing Approaches}
 \label{sec:Motivation: Limitations of Conventional Annealing Approaches}
 
-The controlled generation of chalcogen vacancies in monolayer TMDs requires elevated temperatures, typically on the order of several hundred to above 500~K in monolayer MoS$_2$ \cite{mitterreiter2021role}, due to the high formation energy of chalcogen vacancies \cite{komsa-2015,hong-2015}. A variety of strategies have been explored to achieve this goal, each with distinct trade-offs in terms of spatial control, optical accessibility, and sample integrity. Understanding these trade-offs motivates the specific design choices made in this work.
+The deterministic generation of point defects in transition metal dichalcogenides (TMDs), such as sulfur vacancies, requires substantial thermal activation energy. Density functional theory (DFT) calculations for monolayer MoS$_2$ estimate chalcogen vacancy formation energies on the order of 1--2~eV, while metal vacancies exhibit significantly higher formation energies \cite{noh-2014,komsa-2015}. Experimentally, the formation of sulfur vacancies has been observed in monolayer MoS$_2$ under in-vacuo thermal annealing, with defect-related emission emerging at temperatures above $\sim 500$~K and becoming increasingly pronounced at higher temperatures around 800~K \cite{mitterreiter2021role}.
 
-A straightforward approach to thermally activate chalcogen vacancies is to extend the vacuum annealing system described in Chapter~\ref{chap:methodology} to higher temperatures. In this scheme, the sample is annealed inside the vacuum chamber and subsequently transferred to the cryostat for low-temperature optical characterization. Despite its simplicity, this approach carries a fundamental drawback: every annealing--characterization cycle requires physically moving the sample between the two systems, each transfer taking several hours. This not only exposes the sample to ambient air at every step, but also forces remounting in the cryostat, introducing positional uncertainties that prevent tracking the optical response at the same spatial location across successive annealing temperatures. Cooling the cryostat back to base temperature after each remounting adds a further delay of ten hours or more, making a systematic temperature-dependent study across many annealing steps prohibitively time-consuming in practice.
+A straightforward approach to thermally activate point defects is to extend the vacuum annealing system described in Chapter~\ref{chap:methodology} to higher temperatures. In this scheme, the sample is annealed inside the vacuum chamber and subsequently transferred to a cryostat for low-temperature optical characterization. Despite its simplicity, this approach suffers from a fundamental limitation: each annealing--characterization cycle requires physically transferring the sample between the two systems, with each transfer taking several hours. This not only exposes the sample to ambient air at every step, but also necessitates remounting in the cryostat, introducing positional uncertainties that prevent tracking the optical response at the same spatial location across successive annealing temperatures. In addition, cooling the cryostat back to base temperature after each remounting typically requires ten hours or more, making systematic temperature-dependent studies time-consuming in practice.
 
-The approach developed in this work addresses all of these limitations simultaneously. By integrating a micro-heater chip directly inside a cryogenic $\mu$PL setup, annealing and optical characterization are performed in the same vacuum environment, at the same spatial position, without any sample transfer. This enables a direct comparison of different approaches in terms of spatial control, optical accessibility, and sample integrity.
+The approach developed in this work addresses these limitations by integrating a micro-heater chip into a cryogenic $\mu$PL setup, enabling in-situ annealing and optical characterization without sample transfer.
 
 \section{In-situ Thermal Annealing Platform}
 \label{sec:In-situ Thermal Annealing Platform}
 
-The deterministic generation of point defects in TMDs, such as sulfur vacancies in monolayer WS$_2$, requires high thermal activation energy \cite{noh-2014,komsa-2015}. First-principles calculations calculations estimate vacancy formation energies on the order of several eV, necessitating annealing temperatures well above 900
+To overcome the challenges discussed in the previous section, we developed an in-situ local heating platform that is fully integrated into a cryogenic micro-photoluminescence ($\mu$--PL) setup. The key concept is the use of a micro-heater chip placed inside the cryostat, which allows the sample to be heated up to $\sim 1200$~K by Joule heating while maintaining the surrounding cryogenic environment at $\sim 3.6$~K. This localized heating confines the thermal gradient to the immediate vicinity of the suspended membrane, leaving the objective, cryostat walls, and optical components at low temperature throughout the experiment.
 
-The deterministic generation of point defects in TMDs, such as sulfur vacancies, requires high thermal activation energy \cite{noh-2014,komsa-2015}. While conventional furnace annealing is widely used, it necessitates transferring samples through ambient conditions, which can lead to unintended oxidation or hydrocarbon re-contamination. Furthermore, the lack of in-situ optical monitoring during thermal treatment prevents precise control over defect density.
+Fig.~\ref{fig:annealing}(a) shows a photograph of the sample mounted inside the cryostat in front of a 50$\times$ objective. Fig.~\ref{fig:annealing}(b) illustrates the in-situ thermal annealing process.
 
-To overcome these challenges, we developed an in-situ local heating system integrated into a cryogenic photoluminescence (PL) setup. This system enables localized high-temperature annealing up to 1200~K under high vacuum ($<10^{-6}$~Torr), while maintaining the surrounding environment at cryogenic temperatures ($\sim$3.6~K).
-
-Fig.~\ref{fig:annealing}(a) shows a photograph of the sample mounted inside the cryostat in front of a 50$\times$ objective. Fig.~\ref{fig:annealing}(b) illustrates the in-situ thermal annealing process. The system is based on a micro-heater chip that enables localized heating of the sample by applying an electrical current. The sample is placed directly on the chip, allowing controlled thermal annealing while maintaining the surrounding cryogenic environment.
-
-During annealing, photoluminescence measurements can be performed simultaneously. Owing to the localized heating, the temperature of the cryostat remains low, enabling rapid cooling of the sample back to cryogenic temperature by simply switching off the current. This annealing and cooling sequence, together with optical measurements, is repeated at each target annealing temperature.
+During annealing, photoluminescence measurements can be performed simultaneously. Owing to the localized heating, the temperature of the cryostat remains low, enabling rapid cooling of the sample back to cryogenic temperature by simply switching off the current.
 
 This approach minimizes contamination and enables immediate spectroscopic characterization of newly formed defects without exposure to ambient conditions.
 
@@ -51,17 +47,15 @@ Each annealing step follows a standardized protocol: the current is increased gr
 \section{Design and Characterization of the Micro-heater Chip}
 \label{sec:Design and Characterization of the Micro-heater Chip}
 
-The core of the in-situ thermal annealing platform is based on localized heating, which is enabled by a micro-heater chip. The micro-heater chips used in this work are commercial devices (EDEN Instruments) designed for localized heating applications, including transmission electron microscopy (TEM). The chip features a central region with an array of holes, allowing both thermal isolation and compatibility with optical and electron-beam measurements.
+The core component of the in-situ thermal annealing platform is the micro-heater chip. The chips used in this work are commercial devices supplied by EDEN Instruments, originally designed for in-situ heating in transmission electron microscopy (TEM) experiments. Their compact form factor and compatibility with vacuum environments make them well suited for integration into a cryogenic optical setup.
 
-The chips are pre-calibrated by the manufacturer under secondary vacuum conditions at room temperature. As a result, calibration data relating temperature, electrical current, and resistance are provided together with the device.
+% explanation for chip
+Fig.~\ref{fig:micro_heater}(a,b) show the schematic and optical images of the chip, illustrating its overall structure. Each chip consists of a thin silicon carbide (SiC) membrane, typically 120~nm thick, suspended between two doped silicon contacts. The contacts are electrically connected to the external circuit via gold electrodes on both sides of the chip. SiC was selected for its exceptional combination of thermal stability, chemical inertness at elevated temperatures, and controlled electrical resistivity \cite{casady-1996,kimoto-2022}, all of which are essential for reliable operation at temperatures up to $\sim 1200$~K in vacuum. The suspended geometry provides high thermal resistance between the heated central region and the cooler silicon contacts, effectively confining the heat to the membrane area where the sample is located.
 
-Within the chip, a SiC membrane is suspended between two doped silicon contacts. Each contact is connected to external circuitry through gold electrodes on both sides. SiC was selected for its exceptional thermal stability and chemical inertness at elevated temperatures \cite{casady-1996,kimoto-2022}.
+When an electrical current is applied, the SiC membrane heats resistively via Joule heating as illustrated in Fig.~\ref{fig:micro_heater}(a). The temperature distribution across the membrane is uniform in the central region around the array of the holes, as confirmed by the thermal image provided by the manufacturer (Fig.~\ref{fig:micro_heater}(c)). At temperatures approaching 1000  in Fig.~\ref{fig:micro_heater}(d), visible black body radiation can be observed clearly from the membrane, which also shows the local thermal confinement and this is used as a temperature indicator as describled in Section 3.4. %should make a link after
 
-As illustrated in Fig.~\ref{fig:micro_heater}(a), the SiC membrane is resistive and undergoes localized heating when an electrical current is applied via Joule heating. An optical image of the chip is shown in Fig.~\ref{fig:micro_heater}(b).
+The chips are pre-calibrated by the manufacturer under secondary vacuum conditions at room temperature. As a result, calibration data relating temperature, electrical current, and resistance are provided together with the device. The heating process is controlled by applying a constant current while monitoring the corresponding voltage drop, allowing real-time tracking of the membrane resistance. The heating rate is carefully adjusted to avoid thermal stress in the hBN/TMD heterostructure.
 
-The suspended membrane geometry provides high thermal resistance, effectively confining the heat to the central region where the sample is located. As the chip is calibrated at the center of the membrane, the temperature distribution is uniform in the central region around the array of holes, as shown in Fig.~\ref{fig:micro_heater}(c). In addition, blackbody radiation from the membrane is observed at temperatures around 1000$^\circ$C (Fig.~\ref{fig:micro_heater}(d)).
-
-The heating process is controlled by applying a constant current while monitoring the corresponding voltage drop, allowing real-time tracking of the membrane resistance. The heating rate is carefully adjusted to avoid thermal stress in the hBN/TMD heterostructure.
 
 \begin{figure}[htbp]
 	\centering
@@ -70,15 +64,12 @@ The heating process is controlled by applying a constant current while monitorin
 	\label{fig:micro_heater}
 \end{figure}
 
-The SiC chip is mounted onto a custom-designed ceramic sample holder (Fig.~\ref{fig:heater_connection}(a)), which provides both mechanical support and electrical connectivity. Direct handling of the micro-heater chip with tweezers can easily damage the suspended membrane due to its mechanical fragility.
 
-The mounting and bonding steps require careful handling. However, once the chip is securely attached to the holder and electrical connections are established, the assembly enables safe handling without direct contact with the fragile membrane. In practice, keeping the chip mounted on the holder facilitates reliable storage and repeated measurements.
+The chip is mounted onto a custom-designed ceramic holder providing both mechanical support and electrical connectivity (Fig.~\ref{fig:heater_connection}(a)). The gold contacts on both sides are connected to the holder via aluminium wire bonding. Direct handling of the chip with tweezers risks damaging the membrane; however, once this assembly is complete, it enables safe handling without direct contact with the fragile chip. In practice, keeping the chip mounted on the holder facilitates reliable storage and repeated measurements.
 
-In addition, the holder enables straightforward mounting and removal of the chip. The sample can be installed by inserting the copper support of the holder into the corresponding connector inside the cryostat, as shown in Fig.~\ref{fig:heater_connection}(b). Electrical connections between the chip terminals and the holder are established using aluminum wire bonding. This assembly is then interfaced with the internal wiring of the cryostat, which is connected to an external source-measure unit (SMU; Keithley 2400).
+The ceramic holder is then installed inside the cryostat (Fig.~\ref{fig:heater_connection}(b)) in front of the objective and interfaced with the internal wiring, which is connected to an external source-measure unit (SMU; Keithley 2400). The SMU enables precise control of the applied current while simultaneously recording voltage and resistance in real time.
 
-This configuration allows precise control of the electrical current supplied to the heater, while simultaneously monitoring the corresponding voltage and resistance. Overall, the ceramic holder provides reliable electrical interfacing while improving mechanical stability and handling.
-
-Finally, after installation, the cryostat is sealed with a protective cover (Fig.~\ref{fig:heater_connection}(c)), enabling optical measurements under well-controlled thermal conditions at cryogenic temperatures.
+Finally, the cryostat is sealed with a protective cover (Fig.~\ref{fig:heater_connection}(c)), enabling optical measurements under well-controlled vacuum and thermal conditions.
 
 \begin{figure}[htbp]
 	\centering
@@ -88,25 +79,65 @@ Finally, after installation, the cryostat is sealed with a protective cover (Fig
 \end{figure}
 
 
+\subsection{Electrical Characterization of the SiC Membrane}
+
+As mentioned above, the temperature of each chip is calibrated as a function of the applied electrical current. Therefore, each chip has its own calibration curve provided by the manufacturer. Based on these calibration data, we investigate the electrical characteristics of the chip as a function of temperature under vacuum conditions.
+
+The chip consists of a resistive SiC membrane connected to doped Si contacts, which are further connected to gold electrodes. The overall resistance is dominated by the SiC membrane, where Joule heating primarily occurs. Thus, the measured voltage, resistance, and electrical power mainly reflect the intrinsic behavior of the SiC membrane.
+
+Fig.~\ref{fig:chip_IVRT} shows representative electrical characteristics of the chip. The calibration curve provided by the manufacturer is shown in Fig.~\ref{fig:chip_IVRT}(a), where the blue line represents the temperature as a function of applied current. The discrete data points correspond to the actual applied current used for the electrical measurements.
+
+The chip was heated from RT to 1000~$^\circ$C, and the resistance and voltage between the two electrodes were measured at each temperature, as shown in Fig.~\ref{fig:chip_IVRT}(b,c). 
+The resistance decreases with increasing temperature, exhibiting an inverse dependence on temperature. In contrast, the voltage increases rapidly at low temperatures and gradually approaches saturation at higher temperatures, arising from the applied current together with the temperature-dependent resistance.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=\textwidth]{Figure/Chapter_three/chip_IVRT.png}
+	\caption{(a) Applied current vs.\ temperature determined from the calibration chart (RT--1000~$^\circ$C). (b) Corresponding resistance measured during the temperature sweep. (c) Corresponding voltage measured during the temperature sweep.}
+	\label{fig:chip_IVRT}
+\end{figure}
+
+As the temperature increases under Joule heating, governed by the relation
+
+\begin{equation}
+P = VI = I^2 R,
+\end{equation}
+
+the heating behavior is determined by the electrical power. Therefore, it is necessary to analyze the electrical power as a function of temperature. 
+Fig.~\ref{fig:chip_power_T} shows the electrical power dissipated in the device as a function of temperature, indicating the amount of power required to reach a given temperature.
+
+The plot exhibits two distinct linear regimes. From RT to 300~$^\circ$C, the electrical power increases more steeply, followed by a more gradual increase at higher temperatures. This indicates that the electrical power does not exhibit a perfectly linear dependence on temperature; however, it can be used as a secondary thermometer over small temperature intervals.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.6\textwidth]{Figure/Chapter_three/chip_power_T.png}
+	\caption{Electrical power dissipated in the device as a function of temperature, showing two distinct linear regimes.}
+	\label{fig:chip_power_T}
+\end{figure}
+
+
+
+
+
 
 % section introduction (end)
 
-\section{Temperature Calibration}
+\section{Temperature Calibration: Exciton and Blackbody Methods}
 \label{sec:Temperature Calibration}
 
 Precise temperature control is essential for correlating annealing conditions with defect formation. In particular, it is necessary to determine the temperature at which defect-related phenomena emerge.
 
-As discussed in Sec.~\ref{sec:Design and Characterization of the Micro-heater Chip}, the micro-heater chip is pre-calibrated by the manufacturer under vacuum conditions at room temperature. Under these conditions, the temperature can be accurately controlled based on the provided calibration data, which relates electrical current, voltage, and resistance to temperature.
+Any quantitative study of defect formation requires precise knowledge of the local sample temperature. The manufacturer calibrates each chip at room temperature under secondary vacuum, but this calibration does not transfer directly to the cryogenic environment of the experiment: at a base temperature of ~3.6 K, the heat dissipation pathways through the chip supports and wiring differ substantially from the room-temperature case. An independent thermometry approach, tied to the sample itself rather than to the chip electronics, is therefore indispensable.
 
-However, in the present system, the micro-heater chip is integrated into a cryogenic environment. During operation, the chip is locally heated while the surrounding cryostat remains at low temperature. In this configuration, the manufacturer-provided calibration is no longer directly applicable, and the actual temperature of the sample cannot be reliably determined from electrical parameters alone.
-
-Therefore, an independent calibration method is required to establish a reliable temperature scale under experimental conditions. To this end, we introduce an alternative temperature indicator that remains valid across a wide temperature range and is directly linked to the sample itself.
+The strategy adopted here exploits the monolayer WS$_2$ as a built-in thermometer. The temperature dependence of the neutral-exciton energy provides a precise and self-consistent temperature scale from cryogenic temperatures up to ~925 K. Above this range, where the PL signal is quenched, blackbody radiation from the SiC membrane provides a seamless extension of the scale up to 1200 K.
 
 \subsection{Temnperature Calibration Based on Exciton Emission Energy}
 
+In direct-gap semiconductors, the bandgap energy decreases with increasing temperature due to electron--phonon interactions and lattice thermal expansion. In monolayer WS$_2$, the photoluminescence is dominated by the neutral exciton ($X_A^0$), whose emission energy closely follows this bandgap renormalization, making it a reliable thermometric indicator.
+
 To address this, we employ an optical method based on photoluminescence (PL) spectroscopy. Monolayer TMDs such as WS$_2$ exhibit strong light emission due to their direct bandgap electronic structure, enabling precise tracking of their emission energy.
 
-The emission energy of the neutral exciton ($X_A^0$) is strongly dependent on temperature. This dependence originates from temperature-induced bandgap renormalization in semiconductors, primarily driven by electron--phonon interactions. As the temperature increases, the bandgap decreases, resulting in a redshift of the PL emission. This well-defined energy shift allows the exciton emission to serve as a reliable indicator of the local temperature.
+The emission energy of the neutral exciton ($X_A^0$) is strongly dependent on temperature, primarily due to bandgap renormalization driven by electron--phonon interactions. As the temperature increases, the bandgap decreases, resulting in a redshift of the PL emission. This well-defined energy shift allows the exciton emission to serve as a reliable indicator of the local temperature.
 
 This temperature dependence of the exciton energy can be described using an analytical model known as the Pässler model:
 
@@ -119,43 +150,47 @@ E_g(T) = E_g(0) - \frac{\alpha \Theta}{2}
 
 where the parameters for an encapsulated sample were determined in \cite{nagler-2018} and are given by $E_g(0) \approx 2.063\,\mathrm{eV}$, $\alpha \approx 3.47 \times 10^{-4}\,\mathrm{eV/K}$, $\Theta \approx 200.89\,\mathrm{K}$, and $p \approx 2.35$.
 
-Fig.~\ref{fig:calibration_rt} shows the evolution of the PL spectrum of a WS$_2$ monolayer with increasing temperature under vacuum conditions. At room temperature, the PL spectrum consists of one or two dominant peaks corresponding to the neutral exciton and the negatively charged exciton, enabling straightforward tracking of the exciton emission energy.
+Fig.~\ref{fig:calibration_rt} shows the evolution of the PL spectrum of a WS$_2$ monolayer with increasing temperature under vacuum conditions. At room temperature, the PL spectrum consists of one or two dominant peaks corresponding to the neutral exciton and the negatively charged exciton, enabling straightforward tracking of its emission energy.
 
-As the temperature increases, a clear redshift of the exciton energy is observed (Fig.~\ref{fig:calibration_rt}(a)). The measured energy shift is in excellent agreement with the Pässler model, as shown in Fig.~\ref{fig:calibration_rt}(b). In addition, a shift of approximately 19 meV is attributed to the difference in exciton binding energy between encapsulated and non-encapsulated monolayers \cite{raja-2017,cadiz-2017}.
+As the temperature increases, a clear redshift of the exciton energy is observed (Fig.~\ref{fig:calibration_rt}(a)). The measured energy shift is in excellent agreement with the Pässler model, as shown in Fig.~\ref{fig:calibration_rt}(b). In addition, a shift of approximately 19~meV is attributed to the difference in exciton binding energy between encapsulated and non-encapsulated monolayers \cite{raja-2017,cadiz-2017}.
 
 From these calibration results, a direct relationship between temperature and exciton emission energy is established. Consequently, the exciton energy can be used to estimate the local temperature of the emitter, in this case a monolayer TMD.
 
 \begin{figure}[htbp]
-	\centering
-	\includegraphics[width=\textwidth]{Figure/Chapter_three/calibration_rt.png}
-	\caption{(a) Evolution of the PL spectrum of a WS$_2$ monolayer from 25$^\circ$C (300 K) to 500$^\circ$C (773 K). (b) Temperature dependence of the neutral exciton ($X_A^0$) energy and its fit using the Pässler model.}
-	\label{fig:calibration_rt}
+    \centering
+    \includegraphics[width=\textwidth]{Figure/Chapter_three/calibration_rt.png}
+    \caption{(a) Evolution of the PL spectrum of a WS$_2$ monolayer from 25$^\circ$C (300~K) to 500$^\circ$C (773~K). (b) Temperature dependence of the neutral exciton ($X_A^0$) energy and its fit using the Pässler model.}
+    \label{fig:calibration_rt}
 \end{figure}
 
-To further validate this approach over a wide temperature range, additional measurements were performed in a cryostat at temperatures below room temperature. In encapsulated WS$_2$ monolayers, the neutral exciton emission is significantly suppressed at low temperatures due to the presence of a lower-energy dark excitonic state arising from spin--valley coupling in the band structure. Furthermore, in non-encapsulated WS$_2$ monolayers, dielectric disorder in the surrounding environment leads to a PL spectrum containing multiple excitonic complexes that cannot be clearly identified. As a result, direct PL measurements become less reliable in this regime.
+\subsection{PLE-Based Calibration at Low Temperatures}
 
-To overcome this limitation, photoluminescence excitation (PLE) spectroscopy was employed. By tuning the excitation energy and probing the absorption resonance, both A and B exciton resonances could be reliably tracked over the temperature range from 3 K to 300 K using the cryostat temperature control system. The evolution of the PLE spectra is shown in Fig.~\ref{fig:calibration_PLE}. The extracted exciton energies from PLE measurements are also in good agreement with the Pässler model.
+Extending the calibration below 300~K requires an alternative to direct PL because the neutral exciton emission is significantly suppressed at low temperatures in monolayer WS$_2$. The origin of this suppression lies in the spin structure of the conduction band. In tungsten-based TMDs (WS$_2$, WSe$_2$), strong spin--orbit coupling splits the conduction band at the K point into two subbands separated by approximately 30--40~meV. Unlike molybdenum-based TMDs, the lower-energy subband in WS$_2$ has an opposite spin orientation to the valence band maximum. The exciton formed from this lower subband is therefore spin-forbidden---a ``dark'' exciton---and lies $\sim$40~meV below the optically bright state \cite{molas2017optical,zhang-2017}. At cryogenic temperatures, the thermal energy $k_B T$ is far too small to populate the upper bright state, and the exciton population relaxes efficiently into the dark state, quenching the direct PL emission. This makes the bright-exciton peak position unreliable or unresolvable in PL below $\sim$100~K.
 
-When comparing PL and PLE at 300 K, only a small energy difference of a few meV is observed, which can be attributed to the Stokes shift.
+To overcome this limitation, we employ photoluminescence excitation (PLE) spectroscopy. By fixing the detection energy and scanning the excitation wavelength, PLE probes the absorption resonances of the excitonic transitions directly, recovering the neutral exciton energy regardless of the emission efficiency. The evolution of the PLE spectra is shown in Fig.~\ref{fig:calibration_PLE}. Both A and B exciton resonances are tracked by PLE from 3~K to 300~K, yielding energies in good agreement with the Pässler model. At 300~K, the PLE-derived energy lies a few meV above the PL peak---a small Stokes shift arising from phonon-assisted relaxation of the exciton before emission.
+
+The temperature is controlled using the built-in heater of the cryostat, which uniformly heats the entire cryostat environment.
 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=\textwidth]{Figure/Chapter_three/calibration_PLE.png}
-	\caption{(a) Evolution of the PLE spectrum of a WS$_2$ monolayer from 3 K to 300 K. (b) Temperature dependence of the neutral exciton ($X_A^0$) energy obtained from PL and PLE measurements, along with the Pässler model fit.}
+	\caption{(a) Evolution of the PLE spectrum of a WS$_2$ monolayer from 3~K to 300~K. (b) Temperature dependence of the neutral exciton ($X_A^0$) energy obtained from PL and PLE measurements, along with the Pässler model fit.}
 	\label{fig:calibration_PLE}
 \end{figure}
 
-By combining cryostat-based temperature control at low temperatures and micro-heater-induced local heating at higher temperatures, the exciton energy was tracked over a broad temperature range, confirming its robustness as a temperature indicator.
+By combining cryostat-based temperature control at low temperatures and micro-heater-induced local heating at higher temperatures, the exciton energy can be tracked over a broad temperature range, confirming its robustness as a temperature indicator.
 
-\subsection{Local Temperature Estimation Using Exciton Energy}
- 
+\subsection{Local Temperature Estimation from Exciton Energy under In Situ Cryogenic Conditions}
+
 Having established the exciton emission energy as a reliable temperature indicator, we use this calibration to estimate the local temperature during in-situ annealing of hBN-encapsulated WS$_2$ monolayers.
 
-In practice, the electrical current supplied to the micro-heater is gradually increased while simultaneously recording the PL spectrum. The evolution of the neutral exciton ($X_A^0$) energy is monitored in real time. As shown in Fig.~\ref{fig:pl_evolution}(a), the PL spectrum exhibits a continuous redshift with increasing current. 
+Encapsulated WS$_2$ monolayers exhibit significantly improved spectral quality, allowing reliable identification of excitonic features even at low temperatures. Encapsulation in a well-controlled dielectric environment reduces disorder and linewidth broadening, enabling the neutral exciton ($X_A^0$) emission to remain clearly observable down to cryogenic temperatures. Although the emission intensity is reduced due to the presence of a lower-energy dark excitonic state, the bright exciton peak remains spectrally well-defined, allowing its energy to be reliably extracted.
 
-By tracking the exciton peak position and using the previously established Pässler model, the local temperature of the sample can be extracted (Fig.~\ref{fig:pl_evolution}(b)). The PL spectra remain well-defined up to temperatures of approximately 925~K, allowing reliable extraction of the exciton energy over a broad temperature range. The continuous redshift observed with increasing current confirms that the exciton energy can be used to monitor the local temperature during in-situ annealing.
+In practice, the electrical current supplied to the micro-heater is gradually increased while simultaneously recording the PL spectrum. The evolution of the neutral exciton ($X_A^0$) energy is monitored in real time. As shown in Fig.~\ref{fig:pl_evolution}(a), the PL spectrum exhibits a continuous redshift with increasing current.
 
-However, as shown in Fig.~\ref{fig:pl_evolution}(c), the PL intensity decreases significantly at elevated temperatures, which limits the reliable extraction of the exciton peak position. This sets an upper bound to the temperature range accessible using exciton-based thermometry.
+By tracking the exciton peak position and using the previously established Pässler model, the local temperature of the sample can be extracted (Fig.~\ref{fig:pl_evolution}(b)). The PL spectra remain well-defined up to temperatures of approximately 925~K, allowing reliable extraction of the exciton energy over a broad temperature range.
+
+However, at elevated temperatures, the integrated PL intensity decreases sharply, which limits the reliable extraction of the exciton peak position. This intensity reduction is a consequence of thermal quenching, as nonradiative recombination channels become increasingly efficient at high temperatures. The dominant mechanism is the thermally activated escape of excitons from radiative states, followed by nonradiative decay at defect sites or through Auger-type processes. At temperatures above $\sim$900~K, the nonradiative recombination rate dominates, and the PL signal-to-noise ratio becomes insufficient for accurate peak fitting.
 
 \begin{figure}[htbp]
 	\centering
@@ -168,86 +203,133 @@ However, as shown in Fig.~\ref{fig:pl_evolution}(c), the PL intensity decreases 
 
 At temperatures above approximately 900~K, the PL intensity is strongly reduced and thermal emission from the membrane begins to dominate the optical signal. In this regime, the excitonic emission can no longer be reliably resolved, and an alternative temperature estimation method is required.
 
-To extend the calibration to higher temperatures, the thermal emission spectrum of the membrane is analyzed. Fig.~\ref{fig:blackbody} shows the measured blackbody radiation at elevated temperatures. The spectra are fitted, after correction for the spectral response of the detection system, using a modified form of Planck's law:
+To extend the calibration to higher temperatures, the thermal emission spectrum of the membrane is analyzed. Fig.~\ref{fig:blackbody} shows the measured thermal radiation at elevated temperatures. The spectra, corrected for the spectral response of the detection system, are fitted using a modified form of Planck's law:
 
 \begin{equation}
 B(\nu, T) = A \frac{(h\nu)^2}{e^{h\nu / k_B T} - 1}
 \end{equation}
 
-where $A$ is a proportionality constant accounting for the overall detection efficiency.
+where $A$ is a proportionality constant accounting for the overall detection efficiency and emissivity of the membrane. Although the SiC membrane behaves as a grey body with an emissivity lower than unity, its spectral dependence is weak over the fitting range, so that emissivity variations can be effectively absorbed into the constant $A$ without affecting the extracted temperature.
 
-At 925~K, where both the exciton emission and blackbody radiation are observable, the temperature extracted from the blackbody fit is $924 \pm 3.4$~K. This value is in excellent agreement with the temperature obtained from the exciton energy, with a discrepancy below 1~K. This consistency validates the use of both methods and ensures reliable temperature estimation across a wide temperature range.
+At 925~K, where both the exciton emission and thermal radiation are observable, the temperature extracted from the blackbody fit is $924 \pm 3.4$~K, as shown in Fig.~\ref{fig:blackbody}(a). This value is in excellent agreement with the temperature obtained from the exciton energy, with a discrepancy below 1~K. This consistency validates the use of both methods and ensures reliable temperature estimation across a wide temperature range.
 
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=\textwidth]{Figure/Chapter_three/blackbody.png}
-	\caption{Blackbody radiation spectra of the suspended membrane used for high-temperature calibration. The spectra are fitted using a modified Planck's law. (a) From 896 K to 1056 K. (b) From 1092 K to 1211 K.}
-	\label{fig:blackbody}
-\end{figure}
+At higher temperatures, as shown in Fig.~\ref{fig:blackbody}(a,b), the thermal emission dominates the optical signal, and the blackbody fitting method enables temperature estimation beyond the exciton thermometry limit.
 
-\subsection{Temperature Calibration Using Raman Spectroscopy}
 
-As an independent approach, temperature determination was performed using Raman spectroscopy on non-encapsulated WS$_2$ monolayers. This method complements exciton-based and blackbody-based thermometry, improving the overall robustness of the temperature determination.
 
-The Raman measurements were carried out under vacuum conditions using a pre-calibrated micro-heater chip. The temperature of the sample was controlled using the manufacturer-provided electrical parameters, which relate the applied current, voltage, and resistance to temperature. Raman spectra were recorded at each set temperature.
 
-The Raman spectra were acquired using a 514.5~nm continuous-wave laser. The excitation beam was spectrally filtered using a reflective volume Bragg bandpass filter, and the scattered light was collected through two notch filters centered at the laser wavelength. This configuration enables simultaneous detection of both Stokes and anti-Stokes signals.
+\section{Raman Spectroscopy as an Independent Temperature Probe}
 
-In principle, the ratio between anti-Stokes and Stokes intensities can be used to determine the temperature. However, in practice, this ratio is strongly affected by the spectral response of the optical components, making reliable quantitative analysis difficult. Fig.~\ref{fig:raman_RT} shows the Raman spectrum measured at 25$^\circ$C. Both the E$_{2g}$ (in-plane) and A$_{1g}$ (out-of-plane) modes are observed in the Stokes and anti-Stokes regions. However, the anti-Stokes signals are significantly affected by the optical response of the setup, leading to distortions in peak intensities. As a result, the ratio between Stokes and anti-Stokes peaks is not reliable in this measurement.
+The exciton-based and blackbody methods described above rely on the electronic and radiative properties of the system. Raman spectroscopy offers a fundamentally different perspective, as it probes the vibrational modes of the crystal lattice, whose frequencies depend on interatomic force constants and anharmonic corrections rather than on the electronic band structure. This independence makes Raman thermometry a valuable cross-check and, in some configurations, a standalone temperature probe.
+
+\subsection{Temperature Dependence of Raman Modes}
+
+The Raman spectra were acquired using a 514.5~nm continuous-wave laser under vacuum conditions. The excitation beam was spectrally filtered using a reflective volume Bragg bandpass filter, and the scattered light was collected through two notch filters centered at the laser wavelength, enabling simultaneous detection of both Stokes and anti-Stokes signals.
+
+In principle, the ratio between anti-Stokes and Stokes intensities can be used to determine the temperature. However, in practice, this ratio is strongly affected by the spectral response of the optical setup, making reliable quantitative analysis difficult. Fig.~\ref{fig:raman_RT} shows the Raman spectrum measured at room temperature, where both Stokes and anti-Stokes regions are visible. As a result, the temperature dependence of the Raman peak position is used instead.
 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=\textwidth]{Figure/Chapter_three/raman_RT.png}
-	\caption{Raman spectrum of a monolayer WS$_2$ measured in vacuum at 25$^\circ$C, showing both Stokes and anti-Stokes regions.}
+	\caption{Raman spectrum of a monolayer WS$_2$ measured at room temperature, showing both Stokes and anti-Stokes regions.}
 	\label{fig:raman_RT}
 \end{figure}
 
-Fig.~\ref{fig:raman} shows the evolution of the Raman spectra from 25$^\circ$C to 1000$^\circ$C under vacuum conditions. With increasing temperature, the Raman peak intensities gradually decrease and eventually vanish at 1000$^\circ$C (1273~K), indicating thermal dissociation of the WS$_2$ monolayer. These results indicate that annealing can be safely performed at temperatures below 1000$^\circ$C.
+Monolayer WS$_2$ exhibits two prominent first-order Raman-active modes: the in-plane E$_{2g}$ mode, corresponding to opposite in-plane vibrations of the W and S sublattices, and the out-of-plane A$_{1g}$ mode, in which the S atoms vibrate perpendicular to the layer while the W atoms remain nearly stationary.
+
+Fig.~\ref{fig:raman} shows the evolution of the Raman spectra from 25$^\circ$C to 1000$^\circ$C under vacuum conditions. Both modes exhibit a systematic redshift with increasing temperature. This behavior originates from anharmonic phonon--phonon interactions and thermal expansion of the lattice, which reduce the effective restoring force of the vibrational modes.
 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=\textwidth]{Figure/Chapter_three/raman.png}
-	\caption{Temperature-dependent Raman spectra of a monolayer WS$_2$ measured in vacuum. (a) 25$^\circ$C to 300$^\circ$C, (b) 350$^\circ$C to 650$^\circ$C, (c) 700$^\circ$C to 1000$^\circ$C.}
+	\caption{Temperature-dependent Raman spectra of a monolayer WS$_2$ measured in vacuum. (a) 25--300$^\circ$C, (b) 350--650$^\circ$C, (c) 700--1000$^\circ$C.}
 	\label{fig:raman}
 \end{figure}
 
-In addition to the intensity reduction, both Raman peak positions exhibit a redshift with increasing temperature. Fig.~\ref{fig:raman_fit} shows the temperature dependence of the A$_{1g}$ mode in both Stokes and anti-Stokes regions (absolute values). The position of the A$_{1g}$ mode is extracted as a function of temperature, showing a linear dependence with a slope of approximately $-0.0134~\mathrm{cm^{-1}/K}$. This value is consistent with previously reported results, where a slope of approximately $-0.0121~\mathrm{cm^{-1}/K}$ was obtained in the temperature range from 100~K to 600~K \cite{huang-2016}. The agreement confirms the reliability of the temperature determination and extends the validation to higher temperatures.
+The A$_{1g}$ mode is preferred as the primary thermometric indicator because it is less sensitive to in-plane biaxial strain and exhibits a more stable and monotonic temperature dependence.
+
+Fig.~\ref{fig:raman_fit} shows the temperature dependence of the A$_{1g}$ mode position. A linear redshift with a slope of $-0.0134~\mathrm{cm^{-1}/K}$ is observed over the full temperature range, in close agreement with previously reported values \cite{huang-2016}. This linear dependence enables reliable temperature estimation independent of exciton-based and blackbody-based methods.
 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.6\textwidth]{Figure/Chapter_three/raman_fit.png}
-	\caption{Temperature dependence of the A$_{1g}$ Raman mode position in both Stokes and anti-Stokes regions, showing a linear redshift with increasing temperature.}
+	\caption{Temperature dependence of the A$_{1g}$ Raman mode position, showing a linear redshift with increasing temperature.}
 	\label{fig:raman_fit}
 \end{figure}
 
-For completeness, Fig.~\ref{fig:dissociation}(a) shows an optical image of the sample before annealing. After annealing up to 1200$^\circ$C, the flake is no longer visible (Fig.~\ref{fig:dissociation}(b)). The absence of Raman features above 1000$^\circ$C further confirms that the WS$_2$ monolayer undergoes thermal dissociation around this temperature.
+\subsection{Thermal Dissociation of WS$_2$}
+
+\subsection{Thermal Dissociation of WS$_2$}
+
+At temperatures approaching 1000$^\circ$C (1273~K), the Raman signal intensity decreases significantly and eventually vanishes, indicating thermal dissociation of the WS$_2$ monolayer. This is confirmed by optical microscopy, as shown in Fig.~\ref{fig:dissociation}.
+
+The WS$_2$ monolayer undergoes complete thermal dissociation, leading to its disappearance from the membrane.
+
+The dissociation process is primarily driven by the thermally activated loss of sulfur species from the lattice. At elevated temperatures, this sulfur depletion leads to the degradation of the crystal structure. As a consequence, no characteristic Raman or photoluminescence features are observed.
 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=\textwidth]{Figure/Chapter_three/dissociation.png}
-	\caption{Optical image of a non-encapsulated WS$_2$ monolayer on the membrane (a) before annealing and (b) after annealing up to 1200$^\circ$C.}
+	\caption{Optical image of a non-encapsulated WS$_2$ monolayer on the membrane (a) before annealing and (b) after annealing up to 1200$^\circ$C, confirming thermal dissociation.}
 	\label{fig:dissociation}
 \end{figure}
 
 
-\section{Stability and Reproducibility of Local Annealing}
+
+\section{Platform Validation: Stability, Reproducibility, and Protocol}
+
+Having established a comprehensive temperature calibration framework, we now assess the overall reliability and reproducibility of the in-situ platform. This validation focuses on three aspects: the mechanical stability of the membrane under repeated thermal cycling, the temperature--power relationship enabling high-temperature estimation, and the standardized annealing protocol used throughout this work.
+
+\subsection{Mechanical Stability under Thermal Cycling}
 
 To ensure reliable optical measurements during repeated annealing cycles, the mechanical stability of the micro-heater membrane was evaluated.
 
-Fig.~\ref{fig:membrane_shift} shows optical images of the SiC membrane under white light illumination at 1000$^\circ$C and after cooling back to room temperature. The red circle indicates the initial position of the central hole of the membrane.
+Fig.~\ref{fig:hole_position} shows optical images of the SiC membrane under white light illumination at 1000$^\circ$C during Joule heating and after cooling back to room temperature. The red circle indicates the reference position of the central hole of the membrane.
 
-After thermal cycling, only a negligible lateral displacement (sub-$\mu$m) is observed. This demonstrates the high mechanical stability of the membrane under repeated heating and cooling.
+After thermal cycling, only a negligible lateral displacement (sub-$\mu$m) is observed, demonstrating the high mechanical stability of the membrane under repeated heating and cooling. This displacement is well below the $\sim$1~$\mu$m diffraction-limited spot size of the excitation laser.
 
-This stability ensures that optical measurements can be performed at the same spatial location on the sample throughout multiple annealing cycles, which is essential for tracking the evolution of defect-related emission.
-
-The difference in apparent color between the two images originates from visible blackbody radiation at elevated temperature.
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=\textwidth]{Figure/Chapter_three/dissociation.png}
+	\includegraphics[width=\textwidth]{Figure/Chapter_three/hole_position.png}
 	\caption{Optical images of the SiC membrane under white light illumination at (a) 1000$^\circ$C and (b) after cooling to room temperature. The red circle indicates the reference position of the membrane center. A negligible lateral displacement (sub-$\mu$m) is observed after thermal cycling.}
 	\label{fig:hole_position}
 \end{figure}
 
+This stability ensures that optical measurements can be performed at the same spatial location on the sample throughout multiple annealing cycles, which is essential for tracking the evolution of defect-related emission.
+
+The difference in apparent color between the two images originates from visible blackbody radiation at elevated temperature.
+
+\subsection{Temperature--Power Relationship and Chip Reproducibility}
+
+Fig.~\ref{fig:chip_power_T2} shows the sample temperature as a function of the applied electrical power for a representative chip, determined from exciton and blackbody thermometry.
+
+At room temperature under vacuum conditions, two distinct linear regimes are observed, reflecting different heat dissipation pathways. In contrast, under cryogenic conditions, the temperature exhibits an approximately linear dependence on the applied power over the measured range.
+
+This behavior arises because heat dissipation is dominated by conduction through the supporting structure, while the effective thermal conductance varies only weakly over the measured temperature range, resulting in an approximately linear temperature--power relationship.
+
+Although the temperature is primarily determined using exciton emission and blackbody radiation, the near-linear relationship between electrical power and temperature provides a practical auxiliary indicator. Since the applied current and corresponding electrical power are continuously monitored during experiments, this enables rapid estimation of the sample temperature in real time.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.6\textwidth]{Figure/Chapter_three/chip_power_T2.png}
+	\caption{Sample temperature as a function of the applied electrical power for a representative heater chip, determined from exciton and blackbody thermometry.}
+	\label{fig:chip_power_T2}
+\end{figure}
+
+\subsection{Standardized Annealing Protocol}
+
+All annealing experiments follow a standardized three-phase protocol.
+
+During the ramp-up phase, the electrical current is increased in steps of 0.05--0.1~mA with waiting times of 30--60~s between steps, minimizing thermal gradients across the heterostructure.
+
+In the annealing phase, the current is held constant at the target value for 30~minutes, allowing the system to reach thermal equilibrium and defect formation to stabilize. This duration was determined empirically, as PL spectral features were observed to stabilize within this timescale, with no significant changes upon further annealing at constant temperature.
+
+In the cool-down phase, the current is gradually reduced to zero, and the sample cools passively to cryogenic temperature over several minutes. Optical measurements are then performed at the same spatial position before the next annealing cycle begins.
+
+Taken together, the demonstrated positional stability, reproducible temperature--power relationship, and well-defined annealing protocol establish the in-situ platform as a reliable and quantitative tool for defect engineering in monolayer TMDs. Combined with the unified temperature calibration framework, this platform provides a robust experimental foundation for the studies presented in Chapters 4 and 5.
+
+\section{Conclusion}
+blahblah
 
 
 
