@@ -52,7 +52,7 @@ The core component of the in-situ thermal annealing platform is the micro-heater
 % explanation for chip
 Fig.~\ref{fig:micro_heater}(a,b) show the schematic and optical images of the chip, illustrating its overall structure. Each chip consists of a thin silicon carbide (SiC) membrane, typically 120~nm thick, suspended between two doped silicon contacts. The contacts are electrically connected to the external circuit via gold electrodes on both sides of the chip. SiC was selected for its exceptional combination of thermal stability, chemical inertness at elevated temperatures, and controlled electrical resistivity \cite{casady-1996,kimoto-2022}, all of which are essential for reliable operation at temperatures up to $\sim 1200$~K in vacuum. The suspended geometry provides high thermal resistance between the heated central region and the cooler silicon contacts, effectively confining the heat to the membrane area where the sample is located.
 
-When an electrical current is applied, the SiC membrane heats resistively via Joule heating as illustrated in Fig.~\ref{fig:micro_heater}(a). The temperature distribution across the membrane is uniform in the central region around the array of the holes, as confirmed by the thermal image provided by the manufacturer (Fig.~\ref{fig:micro_heater}(c)). At temperatures approaching 1000  in Fig.~\ref{fig:micro_heater}(d), visible black body radiation can be observed clearly from the membrane, which also shows the local thermal confinement and this is used as a temperature indicator as describled in Section 3.4. %should make a link after
+When an electrical current is applied, the SiC membrane heats resistively via Joule heating as illustrated in Fig.~\ref{fig:micro_heater}(a). The temperature distribution across the membrane is uniform in the central region around the array of the holes, as confirmed by the thermal image provided by the manufacturer (Fig.~\ref{fig:micro_heater}(c)). At temperatures approaching 1000$^\circ$C, as shown in Fig.~\ref{fig:micro_heater}(d), visible blackbody radiation is emitted from the membrane. This observation reflects the strong local thermal confinement and is further used as a temperature indicator, as described in Section~\ref{subsec:Complementary Temperature Estimation: Blackbody Radiation}.
 
 The chips are pre-calibrated by the manufacturer under secondary vacuum conditions at room temperature. As a result, calibration data relating temperature, electrical current, and resistance are provided together with the device. The heating process is controlled by applying a constant current while monitoring the corresponding voltage drop, allowing real-time tracking of the membrane resistance. The heating rate is carefully adjusted to avoid thermal stress in the hBN/TMD heterostructure.
 
@@ -131,7 +131,7 @@ Any quantitative study of defect formation requires precise knowledge of the loc
 
 The strategy adopted here exploits the monolayer WS$_2$ as a built-in thermometer. The temperature dependence of the neutral-exciton energy provides a precise and self-consistent temperature scale from cryogenic temperatures up to ~925 K. Above this range, where the PL signal is quenched, blackbody radiation from the SiC membrane provides a seamless extension of the scale up to 1200 K.
 
-\subsection{Temnperature Calibration Based on Exciton Emission Energy}
+\subsection{Temperature Calibration Based on Exciton Emission Energy}
 
 In direct-gap semiconductors, the bandgap energy decreases with increasing temperature due to electron--phonon interactions and lattice thermal expansion. In monolayer WS$_2$, the photoluminescence is dominated by the neutral exciton ($X_A^0$), whose emission energy closely follows this bandgap renormalization, making it a reliable thermometric indicator.
 
@@ -169,7 +169,7 @@ Extending the calibration below 300~K requires an alternative to direct PL becau
 
 To overcome this limitation, we employ photoluminescence excitation (PLE) spectroscopy. By fixing the detection energy and scanning the excitation wavelength, PLE probes the absorption resonances of the excitonic transitions directly, recovering the neutral exciton energy regardless of the emission efficiency. The evolution of the PLE spectra is shown in Fig.~\ref{fig:calibration_PLE}. Both A and B exciton resonances are tracked by PLE from 3~K to 300~K, yielding energies in good agreement with the Pässler model. At 300~K, the PLE-derived energy lies a few meV above the PL peak---a small Stokes shift arising from phonon-assisted relaxation of the exciton before emission.
 
-The temperature is controlled using the built-in heater of the cryostat, which uniformly heats the entire cryostat environment.
+The temperature is controlled using the built-in heater of the cryostat, which enables uniform heating of the entire sample environment.
 
 \begin{figure}[htbp]
 	\centering
@@ -200,6 +200,7 @@ However, at elevated temperatures, the integrated PL intensity decreases sharply
 \end{figure}
 
 \subsection{Complementary Temperature Estimation: Blackbody Radiation}
+\label{subsec:Complementary Temperature Estimation: Blackbody Radiation}
 
 At temperatures above approximately 900~K, the PL intensity is strongly reduced and thermal emission from the membrane begins to dominate the optical signal. In this regime, the excitonic emission can no longer be reliably resolved, and an alternative temperature estimation method is required.
 
@@ -259,8 +260,6 @@ Fig.~\ref{fig:raman_fit} shows the temperature dependence of the A$_{1g}$ mode p
 
 \subsection{Thermal Dissociation of WS$_2$}
 
-\subsection{Thermal Dissociation of WS$_2$}
-
 At temperatures approaching 1000$^\circ$C (1273~K), the Raman signal intensity decreases significantly and eventually vanishes, indicating thermal dissociation of the WS$_2$ monolayer. This is confirmed by optical microscopy, as shown in Fig.~\ref{fig:dissociation}.
 
 The WS$_2$ monolayer undergoes complete thermal dissociation, leading to its disappearance from the membrane.
@@ -276,7 +275,7 @@ The dissociation process is primarily driven by the thermally activated loss of 
 
 
 
-\section{Platform Validation: Stability, Reproducibility, and Protocol}
+\section{Platform Validation: Stability, Reproducibility}
 
 Having established a comprehensive temperature calibration framework, we now assess the overall reliability and reproducibility of the in-situ platform. This validation focuses on three aspects: the mechanical stability of the membrane under repeated thermal cycling, the temperature--power relationship enabling high-temperature estimation, and the standardized annealing protocol used throughout this work.
 
@@ -316,20 +315,20 @@ Although the temperature is primarily determined using exciton emission and blac
 	\label{fig:chip_power_T2}
 \end{figure}
 
-\subsection{Standardized Annealing Protocol}
+% \subsection{Standardized Annealing Protocol}
 
-All annealing experiments follow a standardized three-phase protocol.
+% All annealing experiments follow a standardized three-phase protocol.
 
-During the ramp-up phase, the electrical current is increased in steps of 0.05--0.1~mA with waiting times of 30--60~s between steps, minimizing thermal gradients across the heterostructure.
+% During the ramp-up phase, the electrical current is increased in steps of 0.05--0.1~mA with waiting times of 30--60~s between steps, minimizing thermal gradients across the heterostructure.
 
-In the annealing phase, the current is held constant at the target value for 30~minutes, allowing the system to reach thermal equilibrium and defect formation to stabilize. This duration was determined empirically, as PL spectral features were observed to stabilize within this timescale, with no significant changes upon further annealing at constant temperature.
+% In the annealing phase, the current is held constant at the target value for 30~minutes, allowing the system to reach thermal equilibrium and defect formation to stabilize. This duration was determined empirically, as PL spectral features were observed to stabilize within this timescale, with no significant changes upon further annealing at constant temperature.
 
-In the cool-down phase, the current is gradually reduced to zero, and the sample cools passively to cryogenic temperature over several minutes. Optical measurements are then performed at the same spatial position before the next annealing cycle begins.
+% In the cool-down phase, the current is gradually reduced to zero, and the sample cools passively to cryogenic temperature over several minutes. Optical measurements are then performed at the same spatial position before the next annealing cycle begins.
 
-Taken together, the demonstrated positional stability, reproducible temperature--power relationship, and well-defined annealing protocol establish the in-situ platform as a reliable and quantitative tool for defect engineering in monolayer TMDs. Combined with the unified temperature calibration framework, this platform provides a robust experimental foundation for the studies presented in Chapters 4 and 5.
+% Taken together, the demonstrated positional stability, reproducible temperature--power relationship, and well-defined annealing protocol establish the in-situ platform as a reliable and quantitative tool for defect engineering in monolayer TMDs. Combined with the unified temperature calibration framework, this platform provides a robust experimental foundation for the studies presented in Chapters 4 and 5.
 
 \section{Conclusion}
-blahblah
+
 
 
 
