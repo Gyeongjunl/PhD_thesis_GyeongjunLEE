@@ -33,7 +33,7 @@ For comparison, the $X_L$ peak at the same low power has a FWHM of $\sim$2--3~me
 
 The spectral isolation of $X_D$ from the intrinsic WS$_2$ emission features (which are concentrated above 1.99~eV) is $\gtrsim$25~meV, sufficient for selective spectral filtering in subsequent photon correlation and time-resolved experiments.
 
-\textcolor{red}{Should put power dependence of narrow emission from chip 3-4.}
+% TODO: add power dependence of narrow emission from chip 3-4
 
 \subsection{Power Dependence and Linewidth Broadening}
 \label{subsec:Power Dependence and Linewidth Broadening}
@@ -81,11 +81,8 @@ where $R_{\mathrm{APD1}}$ and $R_{\mathrm{APD2}}$ are the photon count rates det
     \label{fig:power_dep_xd}
 \end{figure}
 
-% \section{Spectroscopic Characterization of $X_D$} % (fold)
-% \label{sec:Spectroscopic Characterization of $X_D$}
-
-\subsection{PLE spectroscopy: WS$_2$ origin}
-\label{subsec:PLE_spectroscopy_WS2_origin}
+\subsection{PLE Spectroscopy: WS$_2$ Origin}
+\label{subsec:PLE Spectroscopy WS2 Origin}
 
 The sub-meV linewidth of $X_D$ and its 75--86~meV offset below the neutral exciton raise the question of whether this feature is intrinsic to WS$_2$ or could arise from defects in the surrounding hBN or SiC layers. To resolve this, we performed PLE spectroscopy with the detection window centered on the $X_D$ peak.
 
@@ -102,12 +99,10 @@ The consistent identification of WS$_2$ excitonic resonances in the PLE of $X_D$
     \label{fig:ple_xd}
 \end{figure}
 
-
-
 \subsection{Time-Resolved PL: Single-Exponential Decay and Nanosecond Lifetime}
 \label{subsec:Time-Resolved PL Nanosecond Lifetime}
 
-Time-resolved photoluminescence (TRPL) measurements were performed on chip 3-1 and chip 3-4 to determine the radiative lifetime of $X_D$. The laser pulse duration is 40~ps and the repetition period is 12.8~ns (78~MHz).
+The PLE measurements confirm that $X_D$ emission originates from the WS$_2$ layer. To further characterize the emitter, we performed time-resolved photoluminescence (TRPL) measurements on chip 3-1 and chip 3-4 to determine the radiative lifetime of $X_D$. The laser pulse duration is 40~ps and the repetition period is 12.8~ns (78~MHz).
 
 Fig.~\ref{fig:trpl_xd_3_1}(a) shows the TRPL time-energy map recorded on chip 3-1 at $T = 3.64$~K with $\lambda_{\mathrm{laser}} = 514$~nm and $P = 1$~$\mu$W. The temporal profiles of $X_D$ and the trion are compared directly on a linear scale in Fig.~\ref{fig:trpl_xd_3_1}(b). The trion decays with $\tau_{\mathrm{trion}} \approx 600$~ps, whereas $X_D$ exhibits distinctly different dynamics: its onset is delayed by approximately 130~ps relative to the trion peak, followed by a slow decay extending over several nanoseconds. The semi-logarithmic decay trace in Fig.~\ref{fig:trpl_xd_3_1}(c) confirms that the $X_D$ decay is well described by a single exponential $I(t) \propto \exp(-t/\tau)$ with $\tau \approx 2$~ns.
 
@@ -127,17 +122,17 @@ TRPL measurements were also performed on chip 3-4, which serves as the primary s
     \label{fig:trpl_xd_3_4}
 \end{figure}
 
-The delayed onset of $X_D$---observed on both chips---reflects the two-step nature of the excitation: photons are first absorbed by the WS$_2$ lattice, generating free excitons which then diffuse through the monolayer until captured by the $X_D$ defect site. This is consistent with the $\sim$200~ps delay observed for $X_L$ in chip 2-10 (Chapter~\ref{chap:four}), suggesting that the exciton diffusion and capture dynamics are a common feature of thermally activated defect emission in WS$_2$. The nanosecond-scale lifetimes of $X_D$---$\tau \approx 2$~ns on chip 3-1 and $\tau \approx 0.9$~ns on chip 3-4---are significantly longer than the $X_L$ emission ($\tau \approx 513$~ps in chip 2-10) and the main paper reports $\tau \approx 0.9$~ns for $X_L$ (chip 3-4).
+The delayed onset of $X_D$---observed on both chips---reflects the two-step nature of the excitation: photons are first absorbed by the WS$_2$ lattice, generating free excitons which then diffuse through the monolayer until captured by the $X_D$ defect site. This is consistent with the $\sim$200~ps delay observed for $X_L$ in chip 2-10 (Chapter~\ref{chap:four}), suggesting that the exciton diffusion and capture dynamics are a common feature of thermally activated defect emission in WS$_2$. The nanosecond-scale lifetimes of $X_D$---$\tau \approx 2$~ns on chip 3-1 and $\tau \approx 0.9$~ns on chip 3-4---are significantly longer than the $X_L$ emission ($\tau \approx 513$~ps in chip 2-10, Chapter~\ref{chap:four}), consistent with the nanosecond lifetimes typically reported for single-photon emitters in 2D materials. As the emitter lifetime is much longer than the laser pulse duration (40~ps) and much shorter than the repetition period (12.8~ns), $X_D$ is well placed in the ideal regime for single-photon operation, motivating the photon correlation measurements presented in the following section.
 
 
-\section{Quantum Optical Characterization: Second-Order Photon Correlations} % (fold)
+\section{Quantum Optical Characterization: Second-Order Photon Correlations}
 \label{sec:Quantum Optical Characterization: Second-Order Photon Correlations}
 
-\subsection{Hanbury Brown–Twiss Interferometry}
-\label{subsec:Hanbury Brown–Twiss Interferometry}
+\subsection{Hanbury Brown--Twiss Interferometry}
+\label{subsec:Hanbury Brown-Twiss Interferometry}
 
-\subsection{Photon Antibunching and $g^2(0)$ < 0.5}
-\label{subsec:Photon Antibunching and $g^2(0)$ < 0.5}
+\subsection{Photon Antibunching and $g^{(2)}(0) < 0.5$}
+\label{subsec:Photon Antibunching and g2(0) < 0.5}
 
 \subsection{Quantum Yield and Detection Efficiency}
 \label{subsec:Quantum Yield and Detection Efficiency}
