@@ -190,30 +190,10 @@ The quantum yield is defined as the probability that an absorbed photon ultimate
 where $R_{\mathrm{det}} \approx 1000$~counts/s is the detected count rate and $R_{\mathrm{abs}}$ is the absorbed photon rate. This quantum yield of $\sim$5\% is among the highest reported for thermally activated defect emitters in monolayer TMDs, reflecting the high radiative efficiency of the $X_D$ state in the hBN-encapsulated geometry. We note, however, that this value represents a lower bound: photons emitted into guided modes of the hBN/WS$_2$/hBN slab waveguide or into the substrate half-space are not collected by the objective and thus not counted. Integration of $X_D$ into a photonic cavity or a broadband antenna structure could potentially increase the extraction efficiency and thereby the effective quantum yield by orders of magnitude.
 
 
-\section{Spatial Mapping of Annealing-Induced Modifications}
-\label{sec:Spatial Mapping of Annealing-Induced Modifications}
+\section{Spatially Resolved Characterization of Annealing-Induced Modifications}
+\label{sec:Spatially Resolved Characterization}
 
-The optical measurements presented in Sections~\ref{sec:Ultra-Sharp Defect Emission} through \ref{sec:Quantum Optical Characterization} were all performed at fixed spatial positions, optimized to maximize the $X_D$ signal. This point-spectroscopy approach, while providing detailed spectral and temporal information, cannot capture the spatial variability of the annealing-induced modifications across the WS$_2$ flake. To obtain a spatially resolved picture of how the defect landscape evolves with annealing temperature, we employ hyperspectral PL imaging.
-
-\subsection{Hyperspectral PL Imaging: Wide-Field and Confocal Approaches}
-\label{subsec:Hyperspectral PL Imaging: Wide-Field and Confocal Approaches}
-
-Two complementary hyperspectral imaging approaches were employed in this work, each offering distinct advantages.
-
-\textbf{Wide-field hyperspectral imaging.} In this configuration, the entire flake is illuminated by a white LED directed onto the sample through a dichroic mirror. The resulting PL from the entire field of view is collected and directed to the double spectrometer, where the first stage acts as a tunable narrowband filter with a spectral resolution of 0.1~nm. By stepping the filter through the spectral range of interest (600--700~nm) and recording the transmitted image on a cooled CCD camera (PIXIS 400$\times$1340), a three-dimensional datacube $I(x, y, \lambda)$ is assembled. Integrating this datacube over selected wavelength ranges yields spatially resolved PL intensity maps at any desired emission energy.
-
-\textbf{Confocal scanning.} A complementary approach uses the focused laser spot ($\sim$1~$\mu$m diameter) as the excitation source, and the sample is raster-scanned in the $(x, y)$ plane using a two-dimensional piezoelectric stage with a step size as small as 0.1~$\mu$m. At each pixel, a complete PL spectrum is recorded, yielding a PL map with confocal (diffraction-limited) spatial resolution. This method offers higher spatial resolution and better signal-to-noise than the wide-field approach, and enables the excitation power to be precisely controlled at each point. However, it is slower and therefore better suited to mapping smaller areas at higher resolution.
-
-Both approaches yield a full spectral cube that can be analyzed pixel-by-pixel to extract spatially resolved peak positions, linewidths, and integrated intensities as a function of annealing temperature. Fig.~\ref{fig:hyperspectral_setup} shows schematic diagrams of the two setups.
-
-% \begin{figure}[htbp]
-%     \centering
-%     \includegraphics[width=\textwidth]{Figure/Chapter_five/hyperspectral_setup.png}
-%     \caption{Schematic diagrams of the two hyperspectral PL imaging configurations. (a) Wide-field setup: a white LED illuminates the entire flake through a dichroic mirror; the PL is spectrally filtered by the double spectrometer and imaged onto a cooled CCD. (b) Confocal scanning setup: the focused laser beam is raster-scanned across the sample using a 2D piezoelectric stage; a full PL spectrum is recorded at each pixel.}
-%     \label{fig:hyperspectral_setup}
-% \end{figure}
-
-% Figure proposition: Two-panel schematic. (a) Wide-field: white LED → dichroic mirror → sample → objective → spectrometer (acting as filter) → CCD. Show the 0.1 nm spectral sampling interval. (b) Confocal: pulsed/cw laser → objective → sample on piezo stage → spectrometer → CCD/SPAD. Data source: 2nd year CSI report, Fig. 16.
+The optical measurements presented in Sections~\ref{sec:Ultra-Sharp Defect Emission} through \ref{sec:Quantum Optical Characterization: Second-Order Photon Correlations} were all performed at a fixed spatial position, optimized to maximize the $X_D$ signal. This point-spectroscopy approach cannot capture the spatial variability of the annealing-induced modifications across the WS$_2$ flake. To obtain a spatially resolved picture, we employed two complementary approaches---wide-field hyperspectral PL imaging and confocal raster-scanning PL mapping---whose optical configurations are described in Chapter~\ref{chap:methodology}. Taken together, these measurements reveal a progressive spatial restructuring of the excitonic emission with annealing temperature, the localization of low-energy emission at specific sites above 1150~K, and strain-induced spectral shifts quantifiable from correlated PL and Raman measurements.
 
 \subsection{Spatial Evolution of Exciton Energy with Annealing Temperature}
 \label{subsec:Spatial Evolution of Exciton Energy with Annealing Temperature}
@@ -257,20 +237,67 @@ Confocal PL mapping on chip 4-2, shown in Fig.~\ref{fig:confocal_maps}, provides
 \subsection{Localization of Low-Energy Emission after High-Temperature Annealing}
 \label{subsec:Localization of Low-Energy Emission after High-Temperature Annealing}
 
+The hyperspectral dataset recorded on chip~3-2 was re-analyzed with the spectral integration window shifted to approximately 1.85~eV, below the $X_L$ emission range. Above 1150~K annealing, a low-energy peak emerges at two spatially distinct positions within the flake. Fig.~\ref{fig:hyper_low_peak} summarizes the spectral evolution at both positions.
 
+At pixel~(77, 72), the low-energy peak appears after the 1150~K annealing step and redshifts progressively with increasing temperature. Its intensity increases and reaches a maximum after the 1250~K anneal, then decreases at higher temperatures and eventually disappears upon further annealing. A qualitatively identical behavior is observed at pixel~(61, 69): the emission appears above 1150~K, peaks at 1250~K, and vanishes at higher temperatures. The energies of the two peaks after the 1250~K anneal are approximately 1.854~eV and 1.827~eV, respectively.
 
-\section{Raman Spectroscopy and Local Strain Analysis}
-\label{sec:Raman Spectroscopy and Local Strain Analysis}
+The spatial localization of this emission to two fixed positions---which remain unchanged across successive annealing steps---and its appearance only above a well-defined annealing threshold indicate that these spots correspond to specific structural sites within the WS$_2$ flake.
 
-\subsection{Temperature-Dependent Raman Features: $E_{2g}$ and $A_{1g}$ Mode Shifts}
-\label{subsec:Temperature-Dependent Raman Features}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{Figure/Chapter_five/hyper_low_peak.png}
+    \caption{Emergence and evolution of low-energy emission at two localized positions in chip~3-2 above 1150~K annealing. (a--c) Results for pixel~(77, 72): (a) hyperspectral PL map after 1250~K annealing with the selected pixel marked, (b) PL spectra showing the evolution of the low-energy peak between 1150~K and 1448~K, and (c) peak intensity (left axis) and energy (right axis) as a function of annealing temperature. (d--f) Corresponding results for pixel~(61, 69): (d) hyperspectral PL map after 1250~K annealing, (e) PL spectral evolution, and (f) peak intensity and energy as a function of annealing temperature.}
+    \label{fig:hyper_low_peak}
+\end{figure}
+
 
 \subsection{Strain Quantification from PL and Raman Gauge Factors}
 \label{subsec:Strain Quantification from PL and Raman Gauge Factors}
 
-\subsection{Local Strain, Bandgap Reduction, and Defect Emission}
-\label{subsec:Local Strain, Bandgap Reduction, and Defect Emission}
+To investigate the origin of the spatial inhomogeneities revealed by the hyperspectral measurements, we performed correlated room-temperature PL and Raman measurements on chip~3-5 before and after annealing to 1500~K. Fig.~\ref{fig:plmap_RT_chip3-5} shows PL maps recorded at room temperature. Before annealing, the PL emission is spatially homogeneous in terms of peak energy distribution. After annealing at 1500~K, the PL maps reveal significant spatial inhomogeneity: both the PL intensity and the exciton peak energy vary across the flake, indicating that high-temperature annealing introduced local structural modifications.
 
+To characterize these modifications quantitatively, three representative spots were selected from the post-annealing PL map (Fig.~\ref{fig:chip35_spots}(a)): Spot~1, which shows no spectral shift and serves as the reference, and Spots~2 and 3, which exhibit progressively larger redshifts. PL spectra recorded at room temperature (Fig.~\ref{fig:chip35_spots}(b)) show a clear redshift of the A-exciton peak at Spots~2 and 3. Raman spectra at the same positions (Fig.~\ref{fig:chip35_spots}(c)) reveal the two characteristic vibrational modes of WS$_2$: the in-plane $E_{2g}$ mode and the out-of-plane $A_{1g}$ mode. Both modes shift to lower wavenumber after annealing, with the $E_{2g}$ mode exhibiting a larger absolute shift, consistent with its higher sensitivity to in-plane strain~\cite{wang-2020}.
+
+The local strain at each spot is estimated from the measured spectral shifts using the gauge factors reported in the literature~\cite{wang-2020,wang-2016}:
+\begin{equation}
+\varepsilon_{\mathrm{Raman}} = \frac{\Delta\omega_{E_{2g}}}{d\omega_{E_{2g}}/d\varepsilon}, \qquad \varepsilon_{\mathrm{PL}} = \frac{\Delta E_X}{dE_X/d\varepsilon},
+\label{eq:strain_gauge}
+\end{equation}
+where $d\omega_{E_{2g}}/d\varepsilon \approx -2.05~\mathrm{cm^{-1}/\%}$ and $dE_X/d\varepsilon \approx -58.7~\mathrm{meV/\%}$ are the Raman and PL gauge factors for WS$_2$, respectively. The resulting strain estimates are summarized in Table~\ref{tab:pl_raman_strain}.
+
+\begin{table}[htbp]
+\centering
+\caption{Room-temperature PL and Raman $E_{2g}$ results at three representative spots of chip~3-5 after 1500~K annealing. Strain estimates use the PL A-exciton gauge factor $dE_X/d\varepsilon = -58.7~\mathrm{meV/\%}$ and the Raman gauge factor $d\omega_{E_{2g}}/d\varepsilon = -2.05~\mathrm{cm^{-1}/\%}$~\cite{wang-2020,wang-2016}.}
+\label{tab:pl_raman_strain}
+\begin{tabular}{c c c c c c c}
+\hline
+Spot & \multicolumn{3}{c}{PL (A exciton)} & \multicolumn{3}{c}{Raman $E_{2g}$} \\
+\cline{2-7}
+ & Peak (eV) & $\Delta E$ (meV) & $\varepsilon_{\mathrm{PL}}$ (\%)
+ & Peak (cm$^{-1}$) & $\Delta\omega$ (cm$^{-1}$) & $\varepsilon_{E_{2g}}$ (\%) \\
+\hline
+1 & 1.99655 & \phantom{$-$}0.00 & 0.00 & 357.750 & \phantom{$-$}0.000 & 0.00 \\
+2 & 1.93396 & $-$62.59 & 1.07 & 355.649 & $-$2.100 & 1.02 \\
+3 & 1.90055 & $-$96.00 & 1.64 & 354.864 & $-$2.886 & 1.41 \\
+\hline
+\end{tabular}
+\end{table}
+
+The strain estimates from PL and Raman are broadly consistent at each spot: Spot~2 yields $\varepsilon_{\mathrm{PL}} \approx 1.07\%$ and $\varepsilon_{E_{2g}} \approx 1.02\%$, while Spot~3 yields $\varepsilon_{\mathrm{PL}} \approx 1.64\%$ and $\varepsilon_{E_{2g}} \approx 1.41\%$. The small discrepancies between the two estimates can be attributed to local doping, defect states, anisotropic stress distributions, or the different sensitivities of the PL and Raman probes to local structural modifications~\cite{wang-2020}. The correlated redshifts of the exciton peak and the $E_{2g}$ phonon mode at Spots~2 and 3 indicate that high-temperature annealing introduces tensile strain of order 1--2\% at localized positions within the flake, simultaneously reducing the optical bandgap and softening the in-plane vibrational modes.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{Figure/Chapter_five/plmap_RT_chip3-5.png}
+    \caption{Room-temperature PL maps of chip~3-5 (a) before annealing, showing a spatially homogeneous peak energy distribution, and (b) after annealing at 1500~K, revealing significant spatial inhomogeneity in both PL intensity and exciton peak energy.}
+    \label{fig:plmap_RT_chip3-5}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{Figure/Chapter_five/chip35_spots.png}
+    \caption{(a) PL map of chip~3-5 after 1500~K annealing with three representative spots indicated. (b) Room-temperature PL spectra at the three spots, showing progressive redshift of the A-exciton peak at Spots~2 and 3 relative to the reference Spot~1. (c) Raman spectra at the same spots under 473~nm laser excitation, showing redshifts of the $E_{2g}$ and $A_{1g}$ modes.}
+    \label{fig:chip35_spots}
+\end{figure}
 
 
 \section{Conclusion}
@@ -286,14 +313,10 @@ Time-resolved PL reveals a delayed onset of $\sim$200~ps (reflecting exciton dif
 
 Photon correlation measurements under pulsed excitation at 78~MHz yield $g^{(2)}(0) \approx 0.3$--0.4, well below the 0.5 threshold, providing unambiguous evidence of single-photon emission from $X_D$. The residual $g^{(2)}(0) > 0$ is attributed to background emission and a small number ($\lesssim 2$) of simultaneously active emitters within the diffraction-limited spot.
 
-Hyperspectral PL imaging reveals the spatial evolution of the annealing-induced modifications across the WS$_2$ flake. Wide-field imaging of chip 3-2 shows a sequence from uniform emission before annealing to the emergence of localized bright spots in the 800--1000~K range, followed by a reduction in emission at higher temperatures. A progressive redshift of the exciton energy of up to $\sim$75~meV is observed across the annealing sequence (up to $\sim$1400~K), reflecting the spatial inhomogeneity of the thermally induced structural modifications. Confocal PL mapping on chip 4-2 confirms the spatially structured evolution of the emission with annealing temperature at higher spatial resolution.
+Hyperspectral PL imaging reveals the spatial evolution of the annealing-induced modifications across the WS$_2$ flake. Wide-field imaging of chip 3-2 shows a sequence from uniform emission before annealing to the emergence of localized bright spots in the 800--1000~K range, followed by a reduction in emission at higher temperatures. A progressive redshift of the exciton energy of up to $\sim$75~meV is observed across the annealing sequence (up to $\sim$1400~K), reflecting the spatial inhomogeneity of the thermally induced structural modifications. Confocal PL mapping on chip 4-2 confirms the spatially structured evolution of the emission with annealing temperature at higher spatial resolution. Above 1150~K, low-energy emission localizes at two fixed positions within the flake, with peak energies after the 1250~K anneal of approximately 1.854~eV and 1.827~eV. Correlated PL and Raman measurements on chip~3-5 after 1500~K annealing reveal local tensile strain of 1--2\% at selected positions, consistent with the spatially inhomogeneous bandgap reductions observed in the PL maps.
 
 Taken together, the results of this chapter establish that controlled in-situ thermal annealing of hBN-encapsulated WS$_2$ monolayers is a robust approach to creating single-photon emitters with excellent spectral purity and long radiative lifetime. The approach requires no lithographic processing, ion beams, or chemical functionalization---only thermal energy---making it compatible with clean-room-free sample environments and with the sensitive cryogenic measurements needed to characterize quantum optical properties. The central remaining challenges are the spatial control of emitter placement, the extension of operating temperature, and the demonstration of photon indistinguishability, which will require further reduction of spectral diffusion and integration of $X_D$ emitters into photonic cavities.
 
-
-
-
-% section second_section (end)
 
 
 % ---- bibliography
