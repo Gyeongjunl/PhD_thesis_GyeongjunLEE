@@ -128,25 +128,131 @@ The delayed onset of $X_D$---observed on both chips---reflects the two-step natu
 \section{Quantum Optical Characterization: Second-Order Photon Correlations}
 \label{sec:Quantum Optical Characterization: Second-Order Photon Correlations}
 
+The preceding sections have established that $X_D$ is a spectrally isolated, ultra-narrow, long-lifetime emission channel of WS$_2$ origin. These properties are all necessary conditions for single-photon emission, but not sufficient: a true single-photon source can emit at most one photon per excitation event, which is a fundamentally non-classical property. The definitive experimental test is the measurement of the second-order photon correlation function $g^{(2)}(\tau)$, which directly quantifies the probability of detecting two photons simultaneously.
+
 \subsection{Hanbury Brown--Twiss Interferometry}
 \label{subsec:Hanbury Brown-Twiss Interferometry}
+
+The second-order photon correlation function is defined as
+
+\begin{equation}
+g^{(2)}(\tau) = \frac{\langle I(t)\, I(t+\tau) \rangle}{\langle I(t)\rangle^2},
+\label{eq:g2}
+\end{equation}
+
+where $I(t)$ denotes the instantaneous photon detection rate and $\langle \cdot \rangle$ denotes a time average. For a perfectly coherent (laser) light source, $g^{(2)}(\tau) = 1$ for all $\tau$. For a thermal (chaotic) source, $g^{(2)}(0) = 2$ (photon bunching). For a perfect single-photon emitter, $g^{(2)}(0) = 0$ (photon antibunching), reflecting the impossibility of emitting two photons simultaneously. The conventional threshold for claiming single-photon emission is $g^{(2)}(0) < 0.5$, which cannot be reached by any mixture of coherent sources.
+
+Fig.~\ref{fig:hbt_setup} illustrates the Hanbury Brown--Twiss (HBT) interferometer used in this work. The emission from $X_D$, spectrally filtered by the double spectrometer to isolate the $X_D$ peak, is directed into a 50:50 non-polarizing beamsplitter that divides the photon stream into two paths. Each path terminates at a single-photon avalanche photodiode (SPAD, temporal jitter $\approx 30$~ps). The arrival times of detection events on both SPADs are recorded by a time-correlated single-photon counting (TCSPC) module, which accumulates a histogram of the time difference $\tau$ between start events (SPAD 1) and stop events (SPAD 2). This histogram, after normalization to the uncorrelated background level, yields $g^{(2)}(\tau)$.
+
+Under pulsed excitation at 78~MHz, the $g^{(2)}(\tau)$ histogram takes the form of a comb of peaks separated by the laser repetition period $T_{\mathrm{rep}} = 1/f_{\mathrm{rep}} = 12.8$~ns. Each peak corresponds to coincidences from photons in the same or successive excitation cycles. For an ideal single-photon emitter, the central peak at $\tau = 0$ (same excitation cycle) vanishes, since two photons cannot be emitted in the same cycle. For a realistic emitter with background emission, the central peak is suppressed relative to the side peaks by a factor that depends on the signal-to-background ratio.
+
+% \begin{figure}[htbp]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{Figure/Chapter_five/hbt_setup.png}
+%     \caption{Schematic of the Hanbury Brown--Twiss (HBT) interferometer. The emission from $X_D$ is spectrally filtered by the double spectrometer and directed onto a 50:50 beamsplitter. Photons are detected by two SPADs, and the arrival-time difference $\tau$ is histogrammed by TCSPC electronics to yield $g^{(2)}(\tau)$.}
+%     \label{fig:hbt_setup}
+% \end{figure}
+
+% Figure proposition: Schematic diagram of the HBT setup showing: sample → collection objective → spectrometer filter → 50:50 BS → SPAD1 and SPAD2 → TCSPC electronics → g²(τ) histogram. Also include the formula g²(τ) = <I(t)I(t+τ)> / <I(t)>². Can reuse the schematic from CSI report Fig. 15(a,b).
 
 \subsection{Photon Antibunching and $g^{(2)}(0) < 0.5$}
 \label{subsec:Photon Antibunching and g2(0) < 0.5}
 
+Fig.~\ref{fig:g2_tau} shows the measured $g^{(2)}(\tau)$ histogram for $X_D$ on chip 3-4, accumulated over 24~hours of continuous pulsed excitation at $\lambda_{\mathrm{laser}} = 506$~nm and $P = 1$~$\mu$W, at $T = 3.64$~K. The extended integration time was necessary to accumulate sufficient coincidence counts given the low detected photon rate at the operating power ($\sim$1000 counts/s per SPAD).
+
+The histogram displays the expected comb of peaks separated by 12.8~ns. Critically, the central peak at $\tau = 0$ is clearly suppressed relative to the side peaks: its integrated area is less than 50\% of the average area of the neighboring peaks. The value of $g^{(2)}(0)$, computed as the ratio of the zero-delay peak area to the mean area of the side peaks, is approximately $g^{(2)}(0) \approx 0.3$--0.4, well below the classical threshold of 0.5. This pronounced antibunching constitutes unambiguous evidence that $X_D$ emits predominantly single photons: it is impossible for a classical or thermal light source to produce $g^{(2)}(0) < 1$, and $g^{(2)}(0) < 0.5$ specifically rules out the possibility that the emission is a mixture of two or more classical sources.
+
+The residual finite value of $g^{(2)}(0) \approx 0.3$--0.4 (rather than the ideal 0) arises from two main contributions. First, background emission from intrinsic excitonic features that fall within the spectrometer collection window introduces uncorrelated photon pairs that increase the measured $g^{(2)}(0)$. In the presence of a background contributing a fraction $\rho$ of the total detected signal, the measured value is related to the true single-emitter value by $g^{(2)}_{\mathrm{meas}}(0) = g^{(2)}_{\mathrm{true}}(0) + 2\rho(1-\rho)$ in the limit of a pure background ($g^{(2)}_{\mathrm{bg}}(0) = 1$), so even a 20--30\% background contribution can raise $g^{(2)}(0)$ from 0 to 0.3--0.4. Second, if multiple $X_D$ emitters reside within the diffraction-limited excitation spot simultaneously, their combined emission would yield $g^{(2)}(0) = 1 - 1/N$ for $N$ indistinguishable emitters, corresponding to $g^{(2)}(0) = 0.5$ for $N = 2$ and smaller values for fewer emitters. The observed $g^{(2)}(0) \approx 0.3$--0.4 is consistent with either a single emitter with moderate background or two emitters with minimal background. Future measurements with near-resonant excitation (to suppress background) and narrower spectral filters are expected to bring $g^{(2)}(0)$ closer to zero.
+
+% \begin{figure}[htbp]
+%     \centering
+%     \includegraphics[width=\textwidth]{Figure/Chapter_five/g2_tau.png}
+%     \caption{$g^{(2)}(\tau)$ histogram for the $X_D$ emission (chip 3-4) measured under pulsed excitation at 78~MHz, $\lambda_{\mathrm{laser}} = 506$~nm, $P = 1$~$\mu$W, $T = 3.64$~K (24~h integration). The comb of peaks is separated by the laser repetition period (12.8~ns). The central peak at $\tau = 0$ is suppressed to $g^{(2)}(0) \approx 0.3$--0.4, well below the 0.5 threshold (red dashed line), demonstrating single-photon emission from $X_D$.}
+%     \label{fig:g2_tau}
+% \end{figure}
+
+% Figure proposition: g²(τ) histogram with tau spanning -500 to +500 ns. Periodic peaks at 12.8 ns spacing. Central peak at tau=0 visibly suppressed. Red dashed horizontal line at g²=0.5. Annotate g²(0) value. Data source: 2nd year CSI report, Fig. 15(c); published paper.
+
+
 \subsection{Quantum Yield and Detection Efficiency}
 \label{subsec:Quantum Yield and Detection Efficiency}
 
+In addition to the photon purity established by $g^{(2)}(0)$, the quantum efficiency of the $X_D$ emitter is a key figure of merit for quantum photonic applications. We estimate the quantum yield (QY) of $X_D$ using the detected photon count rate at the saturation power together with the known optical collection efficiency of the system.
+
+The total detected count rate at saturation is $\sim$1000 counts/s per SPAD under pulsed excitation. The overall photon collection efficiency of the optical path, including the microscope objective (NA $= 0.82$), spectrometer transmission, and SPAD quantum efficiency, is estimated as $\eta_{\mathrm{opt}} = 2.44 \times 10^{-4}$. This value accounts for the solid angle subtended by the objective, the Fresnel reflection losses at each optical surface, the finite spectrometer grating efficiency, and the SPAD detection efficiency at the $X_D$ emission wavelength.
+
+The quantum yield is defined as the probability that an absorbed photon ultimately generates a detected photon via the $X_D$ channel. At the saturation power of $P_\gamma = 2.73$~$\mu$W and $f_{\mathrm{rep}} = 78$~MHz, the number of photons per pulse incident on the sample is $P_\gamma / (hf \cdot f_{\mathrm{rep}})$. Combined with the absorption cross-section $\alpha$ extracted from the saturation model (Eq.~\ref{eq:saturation}), the absorbed photon rate can be estimated, yielding
+
+\begin{equation}
+\mathrm{QY} = \frac{R_{\mathrm{det}}}{\eta_{\mathrm{opt}} \cdot R_{\mathrm{abs}}} \approx 5.25\%,
+\end{equation}
+
+where $R_{\mathrm{det}} \approx 1000$~counts/s is the detected count rate and $R_{\mathrm{abs}}$ is the absorbed photon rate. This quantum yield of $\sim$5\% is among the highest reported for thermally activated defect emitters in monolayer TMDs, reflecting the high radiative efficiency of the $X_D$ state in the hBN-encapsulated geometry. We note, however, that this value represents a lower bound: photons emitted into guided modes of the hBN/WS$_2$/hBN slab waveguide or into the substrate half-space are not collected by the objective and thus not counted. Integration of $X_D$ into a photonic cavity or a broadband antenna structure could potentially increase the extraction efficiency and thereby the effective quantum yield by orders of magnitude.
 
 
 \section{Spatial Mapping of Annealing-Induced Modifications}
 \label{sec:Spatial Mapping of Annealing-Induced Modifications}
 
+The optical measurements presented in Sections~\ref{sec:Ultra-Sharp Defect Emission} through \ref{sec:Quantum Optical Characterization} were all performed at fixed spatial positions, optimized to maximize the $X_D$ signal. This point-spectroscopy approach, while providing detailed spectral and temporal information, cannot capture the spatial variability of the annealing-induced modifications across the WS$_2$ flake. To obtain a spatially resolved picture of how the defect landscape evolves with annealing temperature, we employ hyperspectral PL imaging.
+
 \subsection{Hyperspectral PL Imaging: Wide-Field and Confocal Approaches}
 \label{subsec:Hyperspectral PL Imaging: Wide-Field and Confocal Approaches}
 
+Two complementary hyperspectral imaging approaches were employed in this work, each offering distinct advantages.
+
+\textbf{Wide-field hyperspectral imaging.} In this configuration, the entire flake is illuminated by a white LED directed onto the sample through a dichroic mirror. The resulting PL from the entire field of view is collected and directed to the double spectrometer, where the first stage acts as a tunable narrowband filter with a spectral resolution of 0.1~nm. By stepping the filter through the spectral range of interest (600--700~nm) and recording the transmitted image on a cooled CCD camera (PIXIS 400$\times$1340), a three-dimensional datacube $I(x, y, \lambda)$ is assembled. Integrating this datacube over selected wavelength ranges yields spatially resolved PL intensity maps at any desired emission energy.
+
+\textbf{Confocal scanning.} A complementary approach uses the focused laser spot ($\sim$1~$\mu$m diameter) as the excitation source, and the sample is raster-scanned in the $(x, y)$ plane using a two-dimensional piezoelectric stage with a step size as small as 0.1~$\mu$m. At each pixel, a complete PL spectrum is recorded, yielding a PL map with confocal (diffraction-limited) spatial resolution. This method offers higher spatial resolution and better signal-to-noise than the wide-field approach, and enables the excitation power to be precisely controlled at each point. However, it is slower and therefore better suited to mapping smaller areas at higher resolution.
+
+Both approaches yield a full spectral cube that can be analyzed pixel-by-pixel to extract spatially resolved peak positions, linewidths, and integrated intensities as a function of annealing temperature. Fig.~\ref{fig:hyperspectral_setup} shows schematic diagrams of the two setups.
+
+% \begin{figure}[htbp]
+%     \centering
+%     \includegraphics[width=\textwidth]{Figure/Chapter_five/hyperspectral_setup.png}
+%     \caption{Schematic diagrams of the two hyperspectral PL imaging configurations. (a) Wide-field setup: a white LED illuminates the entire flake through a dichroic mirror; the PL is spectrally filtered by the double spectrometer and imaged onto a cooled CCD. (b) Confocal scanning setup: the focused laser beam is raster-scanned across the sample using a 2D piezoelectric stage; a full PL spectrum is recorded at each pixel.}
+%     \label{fig:hyperspectral_setup}
+% \end{figure}
+
+% Figure proposition: Two-panel schematic. (a) Wide-field: white LED → dichroic mirror → sample → objective → spectrometer (acting as filter) → CCD. Show the 0.1 nm spectral sampling interval. (b) Confocal: pulsed/cw laser → objective → sample on piezo stage → spectrometer → CCD/SPAD. Data source: 2nd year CSI report, Fig. 16.
+
 \subsection{Spatial Evolution of Exciton Energy with Annealing Temperature}
 \label{subsec:Spatial Evolution of Exciton Energy with Annealing Temperature}
+
+Fig.~\ref{fig:hyperspectral_sequence} shows a sequence of wide-field hyperspectral PL maps recorded on chip 3-2 at $T \approx 4$~K after successive annealing steps, integrated over the 600--650~nm emission band (which captures both the $X_L$ and $X_D$ channels).
+
+Before annealing and up to $\sim$600~K, the integrated PL map shows a relatively uniform spatial distribution, with the emission concentrated in the central region of the WS$_2$ flake and modest intensity variations reflecting the natural spatial non-uniformity of the exfoliated flake. After annealing at $\sim$700~K, the overall emission intensity begins to vary more strongly across the flake, but no qualitatively new features emerge. A dramatic transformation occurs between 700~K and 900~K: isolated, intensely luminescent spots emerge at specific locations within the flake. These ``bright spots'' are spatially localized on the scale of a few micrometers, and their positions remain fixed across successive annealing steps, indicating that they correspond to specific structural features of the WS$_2$ flake (such as local strain concentrations, grain boundaries, or regions with higher sulfur depletion rates). The bright spots reach maximum intensity after the 900--1050~K anneal and then progressively decrease in brightness at higher temperatures ($>$1200~K), consistent with the thermal dissociation of the WS$_2$ lattice discussed in Chapter~\ref{chap:three}.
+
+% \begin{figure}[htbp]
+%     \centering
+%     \includegraphics[width=\textwidth]{Figure/Chapter_five/hyperspectral_sequence.png}
+%     \caption{Sequence of hyperspectral PL maps of an hBN-encapsulated WS$_2$ flake (chip 3-2) at $T \approx 4$~K, recorded after annealing at temperatures from 400~K to 1448~K (emission integrated over 600--650~nm). The progressive evolution shows initial spectral stability, emergence of bright defect spots at 800--900~K, maximum brightness near 900--1050~K, and gradual decrease at higher temperatures. The scale bar indicates 20~$\mu$m.}
+%     \label{fig:hyperspectral_sequence}
+% \end{figure}
+
+% Figure proposition: Grid of 12 PL maps (matching CSI report Fig. 17): Before annealing, After 400K, 500K, 600K, 700K, 800K, 900K, 1000K, 1050K, 1200K, 1324K, 1448K. False-color scale from blue (low intensity) to red (high intensity). Consistent spatial scale and color scale across all panels. Annealing temperature labeled on each panel. Data source: 2nd year CSI report, Fig. 17.
+
+By tracking the A-exciton peak energy at a fixed spatial position as a function of annealing temperature, we observe a progressive redshift of the exciton energy. Fig.~\ref{fig:exciton_energy_map} shows the extracted exciton peak energies at two representative pixels across the annealing sequence. A monotonic redshift of $\sim$75~meV is observed between the as-prepared sample and the sample after 1400~K annealing. This redshift is not spatially uniform: different positions on the flake exhibit different degrees of redshift, reflecting the spatial inhomogeneity of the thermally induced structural modifications (strain, partial decomposition, and potentially local composition changes).
+
+% \begin{figure}[htbp]
+%     \centering
+%     \includegraphics[width=0.7\textwidth]{Figure/Chapter_five/exciton_energy_map.png}
+%     \caption{Evolution of the A-exciton energy as a function of annealing temperature, extracted at two representative spatial positions (pixels 58,64 and 69,74) from the hyperspectral PL datacube. A progressive redshift of $\sim$75~meV is observed after 1400~K annealing, reflecting the accumulation of local strain in the WS$_2$ lattice.}
+%     \label{fig:exciton_energy_map}
+% \end{figure}
+
+% Figure proposition: Scatter plot or line graph of exciton energy (y-axis, eV) vs. annealing temperature (x-axis, K, 200-1600 K), with two data series for two representative pixels (square and circle markers in different colors). Data source: 2nd year CSI report, Fig. 18(c).
+
+Confocal PL mapping on chip 4-2, shown in Fig.~\ref{fig:confocal_maps}, provides complementary spatial information with higher resolution. The maps recorded before annealing and after 500~K, 600~K, and 700~K annealing steps show the evolution of the total PL intensity distribution across the flake. The initial uniform emission is gradually replaced by a spatially structured pattern after annealing, with some regions brightening (indicating increased defect density) and others darkening. The exciton peak energy extracted from the pixel-by-pixel spectra confirms a progressive redshift with annealing temperature, consistent with the wide-field measurements.
+
+% \begin{figure}[htbp]
+%     \centering
+%     \includegraphics[width=\textwidth]{Figure/Chapter_five/confocal_maps.png}
+%     \caption{Confocal PL maps of chip 4-2 before annealing and after 500~K, 600~K, and 700~K annealing steps, showing the evolution of the total PL intensity distribution. The exciton energy extracted from pixel-by-pixel spectra (not shown) confirms a progressive redshift consistent with the wide-field hyperspectral results.}
+%     \label{fig:confocal_maps}
+% \end{figure}
+
+% Figure proposition: 4-panel figure (before, 500K, 600K, 700K) showing confocal PL intensity maps. Same spatial scale and color scale. Data source: 2nd year CSI report, Fig. 20(a).
+
 
 \subsection{Localization of Low-Energy Emission after High-Temperature Annealing}
 \label{subsec:Localization of Low-Energy Emission after High-Temperature Annealing}
@@ -164,6 +270,26 @@ The delayed onset of $X_D$---observed on both chips---reflects the two-step natu
 
 \subsection{Local Strain, Bandgap Reduction, and Defect Emission}
 \label{subsec:Local Strain, Bandgap Reduction, and Defect Emission}
+
+
+
+\section{Conclusion}
+\label{sec:ch5:Conclusion}
+
+This chapter has presented a comprehensive characterization of the $X_D$ emission in hBN-encapsulated WS$_2$ monolayers, establishing its properties as a single-photon emitter and revealing the spatial and structural context of its formation.
+
+$X_D$ emerges above $\sim$1100~K annealing temperature as a set of ultra-narrow emission peaks positioned 75--86~meV below the neutral exciton, with linewidths at or below the spectrometer resolution limit of $\approx 0.2$~meV at low excitation powers. The power-dependent linewidth narrowing and intensity saturation (with $P_\gamma = 2.73$~$\mu$W under pulsed 78~MHz excitation) confirm the two-level quantum emitter character of $X_D$.
+
+PLE spectroscopy demonstrates unambiguously that $X_D$ is fed through the intrinsic optical resonances of WS$_2$ (A and B excitons and their excited states), ruling out contributions from hBN or SiC. The Stokes shift between the A-exciton absorption and the $X_D$ emission corresponds to a localization energy of $\sim$80--90~meV, slightly shallower than the $\sim$120~meV of $X_L$, consistent with a deeper and more ordered localization potential.
+
+Time-resolved PL reveals a delayed onset of $\sim$200~ps (reflecting exciton diffusion and capture) followed by a single-exponential decay with $\tau \approx 0.9$~ns---approximately twice the lifetime of $X_L$ and nearly an order of magnitude longer than the bright excitonic complexes, consistent with a reduced oscillator strength of the defect-localized state. The long lifetime contributes to an estimated quantum yield of $\sim$5.25\%, among the highest reported for thermally activated 2D defect emitters.
+
+Photon correlation measurements under pulsed excitation at 78~MHz yield $g^{(2)}(0) \approx 0.3$--0.4, well below the 0.5 threshold, providing unambiguous evidence of single-photon emission from $X_D$. The residual $g^{(2)}(0) > 0$ is attributed to background emission and a small number ($\lesssim 2$) of simultaneously active emitters within the diffraction-limited spot.
+
+Hyperspectral PL imaging reveals the spatial evolution of the annealing-induced modifications across the WS$_2$ flake. Wide-field imaging of chip 3-2 shows a sequence from uniform emission before annealing to the emergence of localized bright spots in the 800--1000~K range, followed by a reduction in emission at higher temperatures. A progressive redshift of the exciton energy of up to $\sim$75~meV is observed across the annealing sequence (up to $\sim$1400~K), reflecting the spatial inhomogeneity of the thermally induced structural modifications. Confocal PL mapping on chip 4-2 confirms the spatially structured evolution of the emission with annealing temperature at higher spatial resolution.
+
+Taken together, the results of this chapter establish that controlled in-situ thermal annealing of hBN-encapsulated WS$_2$ monolayers is a robust approach to creating single-photon emitters with excellent spectral purity and long radiative lifetime. The approach requires no lithographic processing, ion beams, or chemical functionalization---only thermal energy---making it compatible with clean-room-free sample environments and with the sensitive cryogenic measurements needed to characterize quantum optical properties. The central remaining challenges are the spatial control of emitter placement, the extension of operating temperature, and the demonstration of photon indistinguishability, which will require further reduction of spectral diffusion and integration of $X_D$ emitters into photonic cavities.
+
 
 
 
