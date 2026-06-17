@@ -1,31 +1,133 @@
 %!TEX root=../sub_chapter_paper.tex
 
 
-\section{Ultra-Sharp Defect Emission at High Annealing Temperatures} % (fold)
-\label{sec:Ultra-Sharp Defect Emission at High Annealing Temperatures}
+\section{Ultra-Sharp Defect Emission at High Annealing Temperatures}
+\label{sec:Ultra-Sharp Defect Emission}
 
-\subsection{Emergence of Narrow emission ($X_D$) above 1100 K}
-\label{subsec:Emergence of narrow emission ($X_D$) above 1100 K}
+Chapter~\ref{chap:four} established that in-situ thermal annealing can activate a narrow defect-related emission in non-encapsulated ($\Delta E \approx 220$~meV below $X_A^0$, FWHM $\approx 12$~meV) and hBN-encapsulated WS$_2$ monolayers ($\Delta E \approx 120$~meV below $X_A^0$, FWHM $\approx 3$~meV). In encapsulated samples, a spectrally isolated emission $X_L$ emerges after $\sim$800--900~K annealing, with power-dependent measurements confirming its localized defect nature. However, photon-correlation measurements performed on $X_L$ did not reveal clear antibunching, leaving open the question of whether it can operate as a single-photon emitter. This chapter presents the natural continuation of that work, extending the annealing temperature above $\sim$1100~K and performing a full spectroscopic and quantum optical characterization of the resulting emission.
+
+\subsection{Emergence of Narrow Emission ($X_D$) above 1100~K}
+\label{subsec:Emergence of Narrow Emission XD above 1100K}
+
+Fig.~\ref{fig:pl_xd_emergence}(a) shows the evolution of the PL spectrum of an hBN-encapsulated WS$_2$ monolayer as the temperature is increased from 7.8~K to 925~K. A progressive redshift of all excitonic peaks is observed with increasing temperature. The temperature is estimated from the neutral exciton peak position using Pässler's model~\cite{passler-1999}. Fig.~\ref{fig:pl_xd_emergence}(b,c) shows the PL spectra after annealing at $\sim$1100~K on two representative chips. In both samples, a new emission feature $X_D$ appears after 1100~K annealing: a set of narrow, isolated peaks emerges at approximately 1.94--1.97~eV, corresponding to an energy offset of $\sim$75--86~meV below the neutral exciton.
+
+Observation of the narrow emission in several samples confirms the reproducibility of this phenomenon. On chip 3-1, after annealing above 1100~K, the dominant $X_D$ peak appears at 1.964~eV; on chip 3-4, it appears at 1.945~eV. In both cases, the energy offset from $X_A^0$ is in the range 75--86~meV, reproducible across samples despite chip-to-chip variation in absolute exciton energy arising from differences in residual strain and dielectric screening. The consistency of the energy offset suggests that it reflects an intrinsic property of the defect state rather than a sample-specific artifact.
+
+The appearance of $X_D$ only above $\sim$1100~K indicates a higher thermal threshold than for $X_L$, suggesting that a distinct defect configuration is involved. The two features could arise from structurally distinct defect types that form at different annealing temperatures. The energy offset of $X_D$ (75--86~meV below $X_A^0$) is smaller than that of $X_L$ ($\sim$120~meV), while the linewidth is dramatically narrower, indicating a qualitatively different emitting state.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{Figure/Chapter_five/pl_xd_emergence.png}
+    \caption{(a) PL spectra of an hBN-encapsulated WS$_2$ monolayer measured at increasing temperatures from 7.8~K to 925~K ($\lambda_{\mathrm{laser}} = 514$~nm, $P = 1$~$\mu$W), showing a progressive redshift of all excitonic peaks. (b,c) PL spectra after annealing above $\sim$1100~K on two representative chips: (b) chip 3-1, showing $X_D$ at 1.964~eV, and (c) chip 3-4, showing $X_D$ at 1.945~eV. In both cases, the energy offset below $X_A^0$ falls in the range 75--86~meV.}
+    \label{fig:pl_xd_emergence}
+\end{figure}
 
 \subsection{Sub-meV Linewidth and Spectral Isolation}
 \label{subsec:Sub-meV Linewidth and Spectral Isolation}
 
-\subsection{Power Dependence and Linewidth Narrowing}
-\label{subsec:Power Dependence and Linewidth Narrowing}
+The most remarkable property of $X_D$ is its spectral narrowness. Fig.~\ref{fig:linewidth_xd} shows PL spectra of the $X_D$ peak (chip 3-4, 1.945~eV) recorded at decreasing excitation powers using the 1800~gr/mm grating of the double spectrometer (instrumental spectral resolution $\approx 0.15$--0.20~meV).
+
+At the highest measured power ($P = 5$~$\mu$W), the $X_D$ peak has a FWHM of approximately 0.6~meV. As the power is systematically reduced, the linewidth narrows monotonically, reaching $\approx 0.2$~meV at the lowest measured power ($P = 0.06$~$\mu$W). This value matches the instrumental resolution limit of the spectrometer, indicating that the true intrinsic linewidth of $X_D$ is at or below 0.2~meV. The power-dependent broadening observed at higher excitation powers is possibly due to local heating induced by the laser.
+
+For comparison, the $X_L$ peak at the same low power has a FWHM of $\sim$2--3~meV---more than an order of magnitude broader than $X_D$ at the same power. This dramatic difference in linewidth indicates that $X_D$ represents a qualitatively different class of emission: a single quantum emitter (or a very small number) with a well-defined, narrow zero-phonon line, rather than an inhomogeneous ensemble.
+
+The spectral isolation of $X_D$ from the intrinsic WS$_2$ emission features (which are concentrated above 1.99~eV) is $\gtrsim$25~meV, sufficient for selective spectral filtering in subsequent photon correlation and time-resolved experiments.
+
+\textcolor{red}{Should put power dependence of narrow emission from chip 3-4.}
+
+\subsection{Power Dependence and Linewidth Broadening}
+\label{subsec:Power Dependence and Linewidth Broadening}
+
+Having established the spectral narrowness of $X_D$, we characterize its intensity saturation behavior under two complementary excitation conditions: continuous-wave (CW) excitation on chip 3-1 and pulsed excitation at 78~MHz repetition rate on chip 3-4. Both datasets are shown in Fig.~\ref{fig:power_dep_xd}.
+
+Fig.~\ref{fig:power_dep_xd}(a) shows the CW power dependence of the $X_D$ emission on chip 3-1. The integrated intensity follows the standard two-level CW saturation model,
+\begin{equation}
+I_{PL}(P) = I_\infty \cdot \frac{P}{P + P_{\mathrm{sat}}^{\mathrm{CW}}},
+\label{eq:cw_saturation}
+\end{equation}
+which arises from the steady-state solution of the rate equations for a two-level emitter under continuous illumination. A fit to Eq.~\ref{eq:cw_saturation} yields $P_{\mathrm{sat}}^{\mathrm{CW}} \approx 5.9~\mu$W, above which the emission saturates. The linewidth of $X_D$ remains near the spectrometer resolution limit ($\sim$0.9~meV) at low powers and broadens monotonically above $\sim$6~$\mu$W, possibly due to local heating induced by the laser.
+
+Fig.~\ref{fig:power_dep_xd}(b) shows the pulsed power dependence of $X_D$ on chip 3-4. The data clearly show sub-linear growth at intermediate powers and saturation at high powers, consistent with the behavior of a quantum two-level emitter under pulsed excitation. In the saturation regime, only one photon per laser pulse can be emitted, as the emitter lifetime ($\sim$900~ps) is much longer than the laser pulse duration (40~ps), and much shorter than the interval between laser pulses (12.8~ns). The PL intensity in the saturation regime is therefore
+\begin{equation}
+I_{\mathrm{PL}}\ (\mathrm{s}^{-1}) = f_{\mathrm{rep}}\, \Phi_y\, \eta_{\mathrm{opt}}, \qquad \text{(saturation regime)}
+\end{equation}
+Outside the saturation regime, the probability that the emitter is excited during a laser pulse ($P_{\mathrm{exc}}$) must be considered, so that
+\begin{equation}
+I_{\mathrm{PL}}\ (\mathrm{s}^{-1}) = P_{\mathrm{exc}}\, f_{\mathrm{rep}}\, \Phi_y\, \eta_{\mathrm{opt}}.
+\end{equation}
+If $P_\gamma$ denotes the probability that a single photon excites the emitter, the excitation probability can be expressed as
+\begin{equation}
+P_{\mathrm{exc}} = 1 - (1 - P_\gamma)^{N_\gamma},
+\end{equation}
+where $N_\gamma$ is the number of laser photons per pulse. For $P_\gamma \ll 1$, this approximates to
+\begin{equation}
+P_{\mathrm{exc}} \simeq 1 - e^{-N_\gamma P_\gamma},
+\end{equation}
+and the power-dependent PL intensity of $X_D$ can be fitted using the exponential form
+\begin{equation}
+I_{X_D}(P_{\mathrm{avg}}) \propto 1 - e^{-\frac{\alpha}{f_{\mathrm{rep}}} P_{\mathrm{avg}}}, \qquad P_\gamma = \alpha h\nu.
+\label{eq:saturation}
+\end{equation}
+From the exponential fit to the data in Fig.~\ref{fig:power_dep_xd}(b), $\alpha = 6.92 \times 10^{12}$~J$^{-1}$, yielding $P_\gamma = \alpha h\nu = 2.73 \times 10^{-6}$ and a pulsed saturation power $f_{\mathrm{rep}}/\alpha \approx 11.3~\mu$W. The quantum yield $\Phi_y$ is extracted directly in the saturation regime as
+\begin{equation}
+\mathrm{QY} = \frac{R_{\mathrm{APD1}} + R_{\mathrm{APD2}}}{f_{\mathrm{rep}}\, \eta_{\mathrm{opt}}},
+\end{equation}
+where $R_{\mathrm{APD1}}$ and $R_{\mathrm{APD2}}$ are the photon count rates detected by the two SPADs. Using a total detected count rate of 1000~counts/s and $\eta_{\mathrm{opt}} = 2.44 \times 10^{-4}$, the quantum yield is estimated to be $\sim$5.25\%. The linewidth of $X_D$ remains near the resolution-limited value of $\lesssim 0.2$~meV at low excitation powers and begins to broaden above $\sim$1~$\mu$W (Fig.~\ref{fig:power_dep_xd}(b), right axis), possibly due to local heating induced by the laser.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{Figure/Chapter_five/power_dep_xd.png}
+    \caption{Power dependence of the $X_D$ peak integrated intensity (left axis) and linewidth (right axis). (a) CW excitation (chip 3-1, $T = 3.64$~K). The solid line is a fit to the CW saturation model (Eq.~\ref{eq:cw_saturation}), yielding $P_{\mathrm{sat}}^{\mathrm{CW}} \approx 5.9~\mu$W. (b) Pulsed excitation (78~MHz, chip 3-4, $T = 3.64$~K). The solid line is a fit to the exponential saturation model (Eq.~\ref{eq:saturation}), yielding $\alpha = 6.92 \times 10^{12}$~J$^{-1}$ ($P_{\mathrm{sat}}^{\mathrm{pulsed}} = f_{\mathrm{rep}}/\alpha \approx 11.3~\mu$W, QY $\approx 5.25\%$). In both cases the linewidth broadens at elevated powers, possibly due to local laser heating.}
+    \label{fig:power_dep_xd}
+\end{figure}
+
+% \section{Spectroscopic Characterization of $X_D$} % (fold)
+% \label{sec:Spectroscopic Characterization of $X_D$}
+
+\subsection{PLE spectroscopy: WS$_2$ origin}
+\label{subsec:PLE_spectroscopy_WS2_origin}
+
+The sub-meV linewidth of $X_D$ and its 75--86~meV offset below the neutral exciton raise the question of whether this feature is intrinsic to WS$_2$ or could arise from defects in the surrounding hBN or SiC layers. To resolve this, we performed PLE spectroscopy with the detection window centered on the $X_D$ peak.
+
+Fig.~\ref{fig:ple_xd} shows the PLE spectra recorded on chip 3-1 at $T = 3.66$~K and $P = 10$~$\mu$W, with detection at the $X_D$ energy (1.964~eV), and on chip 3-4 at $T = 3.64$~K and $P = 1$~$\mu$W, with detection at the $X_D$ energy (1.945~eV). The excitation wavelength was scanned from 400~nm to 600~nm and 450~nm to 620~nm for each sample.
+
+The PLE spectrum displays a clear set of resonances that are immediately recognizable as the intrinsic optical transitions of WS$_2$. For chip 3-4, we identify the A-exciton ground state ($X_A^0$: 1s, $\approx 2.033$~eV) with a small Stokes shift compared to the A-exciton peak in the PL spectrum, the A-exciton 2s excited state ($X_A^0$: 2s, $\approx 2.07$~eV), the trion resonance ($T$, $\approx 2.020$~eV), and the B exciton ($X_B^0$, $\approx 2.45$~eV). For chip 3-1, only the B-exciton resonance is visible, as the scanning range is not sufficient to reach the A-exciton resonance. This pattern is identical to the PLE spectrum of the pristine sample (Section~\ref{subsec:PLE Spectroscopy Exciton and Excited States}) and of the $X_L$ emission (Section~\ref{subsec:PLE Spectroscopy Intrinsic WS2 Resonances}), confirming that $X_D$ shares the same absorption channels as the intrinsic excitonic emission. No features attributable to hBN or SiC are present.
+
+The consistent identification of WS$_2$ excitonic resonances in the PLE of $X_D$, combined with the absence of any hBN or SiC fingerprints, provides clear spectroscopic evidence that $X_D$ is an intrinsic emission channel of the WS$_2$ monolayer, arising from excitons that are absorbed in the WS$_2$ band, relax, diffuse, and become trapped at a specific class of thermally activated defect sites.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{Figure/Chapter_five/ple_xd.png}
+    \caption{PLE spectra of the $X_D$ emission. (a) Chip 3-1 (detection at 1.964~eV, $T = 3.66$~K, $P = 10$~$\mu$W), showing the B-exciton resonance ($X_B^0$). (b) Chip 3-4 (detection at 1.945~eV, $T = 3.64$~K, $P = 1$~$\mu$W), showing resonances at $X_A^0$ (1s), $X_A^0$ (2s), trion ($T$), and $X_B^0$, confirming the intrinsic WS$_2$ origin of $X_D$.}
+    \label{fig:ple_xd}
+\end{figure}
 
 
-
-\section{Spectroscopic Characterization of $X_D$} % (fold)
-\label{sec:Spectroscopic Characterization of $X_D$}
-
-\subsection{PLE spectroscopy: Stokes Shift and WS$_2$ origin}
-\label{subsec:PLE spectroscopy: Stokes Shift and WS$_2$ origin}
 
 \subsection{Time-Resolved PL: Single-Exponential Decay and Nanosecond Lifetime}
-\label{subsec:PLE Spectroscopy: Time-Resolved PL: Single-Exponential Decay and Nanosecond Lifetime}
+\label{subsec:Time-Resolved PL Nanosecond Lifetime}
 
+Time-resolved photoluminescence (TRPL) measurements were performed on chip 3-1 and chip 3-4 to determine the radiative lifetime of $X_D$. The laser pulse duration is 40~ps and the repetition period is 12.8~ns (78~MHz).
 
+Fig.~\ref{fig:trpl_xd_3_1}(a) shows the TRPL time-energy map recorded on chip 3-1 at $T = 3.64$~K with $\lambda_{\mathrm{laser}} = 514$~nm and $P = 1$~$\mu$W. The temporal profiles of $X_D$ and the trion are compared directly on a linear scale in Fig.~\ref{fig:trpl_xd_3_1}(b). The trion decays with $\tau_{\mathrm{trion}} \approx 600$~ps, whereas $X_D$ exhibits distinctly different dynamics: its onset is delayed by approximately 130~ps relative to the trion peak, followed by a slow decay extending over several nanoseconds. The semi-logarithmic decay trace in Fig.~\ref{fig:trpl_xd_3_1}(c) confirms that the $X_D$ decay is well described by a single exponential $I(t) \propto \exp(-t/\tau)$ with $\tau \approx 2$~ns.
 
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{Figure/Chapter_five/trpl_xd_3_1.png}
+    \caption{TRPL of $X_D$ on chip 3-1 ($T = 3.64$~K, $\lambda_{\mathrm{laser}} = 514$~nm, $P = 1$~$\mu$W). (a) Time--energy map. (b) Linear-scale decay traces of $X_D$ and the trion, highlighting the $\sim$130~ps delayed onset of $X_D$ relative to the trion peak. (c) Semi-logarithmic decay trace of $X_D$ with a single-exponential fit, yielding $\tau \approx 2$~ns.}
+    \label{fig:trpl_xd_3_1}
+\end{figure}
+
+TRPL measurements were also performed on chip 3-4, which serves as the primary sample for this chapter. Fig.~\ref{fig:trpl_xd_3_4}(a) shows the corresponding time-energy map, with the energy axis covering 1.92--2.06~eV. The intrinsic excitonic emission (trion, dark trion at 1.99--2.05~eV) decays within $\sim$200~ps, while the $X_D$ emission at $\sim$1.945~eV exhibits distinctly different dynamics: its onset is delayed by approximately 200~ps relative to the laser pulse, followed by a gradual rise and a slow decay extending across several nanoseconds. The semi-logarithmic decay trace in Fig.~\ref{fig:trpl_xd_3_4}(c) yields a single-exponential lifetime of $\tau \approx 0.9$~ns.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{Figure/Chapter_five/trpl_xd_3_4.png}
+    \caption{TRPL of $X_D$ on chip 3-4 ($T = 3.64$~K, $\lambda_{\mathrm{laser}} = 503$~nm, $P = 1$~$\mu$W). (a) Time--energy map showing the fast decay of trion/exciton emission and the delayed onset and slow decay of $X_D$. (b) Time-averaged PL spectrum indicating the spectral window of $X_D$. (c) Semi-logarithmic decay trace of $X_D$ with a single-exponential fit, yielding $\tau \approx 0.9$~ns.}
+    \label{fig:trpl_xd_3_4}
+\end{figure}
+
+The delayed onset of $X_D$---observed on both chips---reflects the two-step nature of the excitation: photons are first absorbed by the WS$_2$ lattice, generating free excitons which then diffuse through the monolayer until captured by the $X_D$ defect site. This is consistent with the $\sim$200~ps delay observed for $X_L$ in chip 2-10 (Chapter~\ref{chap:four}), suggesting that the exciton diffusion and capture dynamics are a common feature of thermally activated defect emission in WS$_2$. The nanosecond-scale lifetimes of $X_D$---$\tau \approx 2$~ns on chip 3-1 and $\tau \approx 0.9$~ns on chip 3-4---are significantly longer than the $X_L$ emission ($\tau \approx 513$~ps in chip 2-10) and the main paper reports $\tau \approx 0.9$~ns for $X_L$ (chip 3-4).
 
 
 \section{Quantum Optical Characterization: Second-Order Photon Correlations} % (fold)
