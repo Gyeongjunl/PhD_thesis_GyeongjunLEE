@@ -190,12 +190,12 @@ The histogram displays the expected comb of peaks separated by 12.8~ns. Critical
 
 The residual finite value of $g^{(2)}(0) \approx 0.3$--0.4 (rather than the ideal 0) arises from two main contributions. First, background emission from intrinsic excitonic features that fall within the spectrometer collection window introduces uncorrelated photon pairs that increase the measured $g^{(2)}(0)$. In the presence of a background contributing a fraction $\rho$ of the total detected signal, the measured value is related to the true single-emitter value by $g^{(2)}_{\mathrm{meas}}(0) = g^{(2)}_{\mathrm{true}}(0) + 2\rho(1-\rho)$ in the limit of a pure background ($g^{(2)}_{\mathrm{bg}}(0) = 1$), so even a 20--30\% background contribution can raise $g^{(2)}(0)$ from 0 to 0.3--0.4. Second, if multiple $X_D$ emitters reside within the diffraction-limited excitation spot simultaneously, their combined emission would yield $g^{(2)}(0) = 1 - 1/N$ for $N$ indistinguishable emitters, corresponding to $g^{(2)}(0) = 0.5$ for $N = 2$ and smaller values for fewer emitters. The observed $g^{(2)}(0) \approx 0.3$--0.4 is consistent with either a single emitter with moderate background or two emitters with minimal background. Future measurements with near-resonant excitation (to suppress background) and narrower spectral filters are expected to bring $g^{(2)}(0)$ closer to zero.
 
-% \begin{figure}[htbp]
-%     \centering
-%     \includegraphics[width=\textwidth]{Figure/Chapter_five/g2_tau.png}
-%     \caption{$g^{(2)}(\tau)$ histogram for the $X_D$ emission (chip 3-4) measured under pulsed excitation at 78~MHz, $\lambda_{\mathrm{laser}} = 506$~nm, $P = 1$~$\mu$W, $T = 3.64$~K (24~h integration). The comb of peaks is separated by the laser repetition period (12.8~ns). The central peak at $\tau = 0$ is suppressed to $g^{(2)}(0) \approx 0.3$--0.4, well below the 0.5 threshold (red dashed line), demonstrating single-photon emission from $X_D$.}
-%     \label{fig:g2_tau}
-% \end{figure}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{Figure/Chapter_five/g2_tau.png}
+    \caption{$g^{(2)}(\tau)$ histogram for the $X_D$ emission (chip 3-4) measured under pulsed excitation at 78~MHz, $\lambda_{\mathrm{laser}} = 506$~nm, $P = 1$~$\mu$W, $T = 3.64$~K (24~h integration). The comb of peaks is separated by the laser repetition period (12.8~ns). The central peak at $\tau = 0$ is suppressed to $g^{(2)}(0) \approx 0.3$--0.4, well below the 0.5 threshold (red dashed line), demonstrating single-photon emission from $X_D$.}
+    \label{fig:g2_tau}
+\end{figure}
 % Source: Published paper / main paper data; CSI 2nd year report Fig. 15(c).
 %   Chip 3-4, pulsed 78 MHz, lambda=506nm, P=1uW, T=3.64K, 24h integration.
 %   tau axis: -500 to +500 ns. Peaks at 12.8 ns spacing. Central peak g2(0)~0.3-0.4.
@@ -230,12 +230,12 @@ Fig.~\ref{fig:hyperspectral_sequence} shows a sequence of wide-field hyperspectr
 
 Before annealing and up to $\sim$600~K, the integrated PL map shows a relatively uniform spatial distribution, with the emission concentrated in the central region of the WS$_2$ flake and modest intensity variations reflecting the natural spatial non-uniformity of the exfoliated flake. After annealing at $\sim$700~K, the overall emission intensity begins to vary more strongly across the flake, but no qualitatively new features emerge. A dramatic transformation occurs between 700~K and 900~K: isolated, intensely luminescent spots emerge at specific locations within the flake. These ``bright spots'' are spatially localized on the scale of a few micrometers, and their positions remain fixed across successive annealing steps, indicating that they correspond to specific structural features of the WS$_2$ flake (such as local strain concentrations, grain boundaries, or regions with higher sulfur depletion rates). The bright spots reach maximum intensity after the 900--1050~K anneal and then progressively decrease in brightness at higher temperatures ($>$1200~K), consistent with the thermal dissociation of the WS$_2$ lattice discussed in Chapter~\ref{chap:three}.
 
-% \begin{figure}[htbp]
-%     \centering
-%     \includegraphics[width=\textwidth]{Figure/Chapter_five/hyperspectral_sequence.png}
-%     \caption{Sequence of hyperspectral PL maps of an hBN-encapsulated WS$_2$ flake (chip 3-2) at $T \approx 4$~K, recorded after annealing at temperatures from 400~K to 1448~K (emission integrated over 600--650~nm). The progressive evolution shows initial spectral stability, emergence of bright defect spots at 800--900~K, maximum brightness near 900--1050~K, and gradual decrease at higher temperatures. The scale bar indicates 20~$\mu$m.}
-%     \label{fig:hyperspectral_sequence}
-% \end{figure}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{Figure/Chapter_five/hyperspectral_sequence.png}
+    \caption{Sequence of hyperspectral PL maps of an hBN-encapsulated WS$_2$ flake (chip 3-2) at $T \approx 4$~K, recorded after annealing at temperatures from 400~K to 1448~K (emission integrated over 600--650~nm). The progressive evolution shows initial spectral stability, emergence of bright defect spots at 800--900~K, maximum brightness near 900--1050~K, and gradual decrease at higher temperatures. The scale bar indicates 20~$\mu$m.}
+    \label{fig:hyperspectral_sequence}
+\end{figure}
 % Source: CSI 2nd year report (methodology.tex), Fig. 17.
 %   Chip 3-2, T~4K, emission integrated 600-650 nm.
 %   Grid of 12 PL maps: Before annealing, 400K, 500K, 600K, 700K, 800K, 900K, 1000K, 1050K, 1200K, 1324K, 1448K.
@@ -243,24 +243,24 @@ Before annealing and up to $\sim$600~K, the integrated PL map shows a relatively
 
 By tracking the A-exciton peak energy at a fixed spatial position as a function of annealing temperature, we observe a progressive redshift of the exciton energy. Fig.~\ref{fig:exciton_energy_map} shows the extracted exciton peak energies at two representative pixels across the annealing sequence. A monotonic redshift of $\sim$75~meV is observed between the as-prepared sample and the sample after 1400~K annealing. This redshift is not spatially uniform: different positions on the flake exhibit different degrees of redshift, reflecting the spatial inhomogeneity of the thermally induced structural modifications (strain, partial decomposition, and potentially local composition changes).
 
-% \begin{figure}[htbp]
-%     \centering
-%     \includegraphics[width=0.7\textwidth]{Figure/Chapter_five/exciton_energy_map.png}
-%     \caption{Evolution of the A-exciton energy as a function of annealing temperature, extracted at two representative spatial positions (pixels 58,64 and 69,74) from the hyperspectral PL datacube. A progressive redshift of $\sim$75~meV is observed after 1400~K annealing, reflecting the accumulation of local strain in the WS$_2$ lattice.}
-%     \label{fig:exciton_energy_map}
-% \end{figure}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.7\textwidth]{Figure/Chapter_five/exciton_energy_map.png}
+    \caption{Evolution of the A-exciton energy as a function of annealing temperature, extracted at two representative spatial positions (pixels 58,64 and 69,74) from the hyperspectral PL datacube. A progressive redshift of $\sim$75~meV is observed after 1400~K annealing, reflecting the accumulation of local strain in the WS$_2$ lattice.}
+    \label{fig:exciton_energy_map}
+\end{figure}
 % Source: CSI 2nd year report (methodology.tex), Fig. 18(c).
 %   Scatter/line plot: exciton energy (eV, y-axis) vs. annealing temperature (K, x-axis, 200-1600K).
 %   Two data series for pixels (58,64) and (69,74). Square and circle markers in different colors.
 
 Confocal PL mapping on chip 4-2, shown in Fig.~\ref{fig:confocal_maps}, provides complementary spatial information with higher resolution. The maps recorded before annealing and after 500~K, 600~K, and 700~K annealing steps show the evolution of the total PL intensity distribution across the flake. The initial uniform emission is gradually replaced by a spatially structured pattern after annealing, with some regions brightening (indicating increased defect density) and others darkening. The exciton peak energy extracted from the pixel-by-pixel spectra confirms a progressive redshift with annealing temperature, consistent with the wide-field measurements.
 
-% \begin{figure}[htbp]
-%     \centering
-%     \includegraphics[width=\textwidth]{Figure/Chapter_five/confocal_maps.png}
-%     \caption{Confocal PL maps of chip 4-2 before annealing and after 500~K, 600~K, and 700~K annealing steps, showing the evolution of the total PL intensity distribution. The exciton peak energy extracted from pixel-by-pixel spectra (not shown) confirms a progressive redshift consistent with the wide-field hyperspectral results.}
-%     \label{fig:confocal_maps}
-% \end{figure}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{Figure/Chapter_five/confocal_maps.png}
+    \caption{Confocal PL maps of chip 4-2 before annealing and after 500~K, 600~K, and 700~K annealing steps, showing the evolution of the total PL intensity distribution. The exciton peak energy extracted from pixel-by-pixel spectra (not shown) confirms a progressive redshift consistent with the wide-field hyperspectral results.}
+    \label{fig:confocal_maps}
+\end{figure}
 % Source: CSI 2nd year report (methodology.tex), Fig. 20(a).
 %   Chip 4-2. 4-panel figure: before annealing, 500K, 600K, 700K.
 %   Confocal PL intensity maps. Same spatial scale and color scale across all panels.
@@ -275,12 +275,12 @@ At pixel~(77, 72), the low-energy peak appears after the 1150~K annealing step a
 
 The spatial localization of this emission to two fixed positions---which remain unchanged across successive annealing steps---and its appearance only above a well-defined annealing threshold indicate that these spots correspond to specific structural sites within the WS$_2$ flake.
 
-% \begin{figure}[htbp]
-%     \centering
-%     \includegraphics[width=\textwidth]{Figure/Chapter_five/hyper_low_peak.png}
-%     \caption{Emergence and evolution of low-energy emission at two localized positions in chip~3-2 above 1150~K annealing. (a--c) Results for pixel~(77, 72): (a) hyperspectral PL map after 1250~K annealing with the selected pixel marked, (b) PL spectra showing the evolution of the low-energy peak between 1150~K and 1448~K, and (c) peak intensity (left axis) and energy (right axis) as a function of annealing temperature. (d--f) Corresponding results for pixel~(61, 69): (d) hyperspectral PL map after 1250~K annealing, (e) PL spectral evolution, and (f) peak intensity and energy as a function of annealing temperature.}
-%     \label{fig:hyper_low_peak}
-% \end{figure}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{Figure/Chapter_five/hyper_low_peak.png}
+    \caption{Emergence and evolution of low-energy emission at two localized positions in chip~3-2 above 1150~K annealing. (a--c) Results for pixel~(77, 72): (a) hyperspectral PL map after 1250~K annealing with the selected pixel marked, (b) PL spectra showing the evolution of the low-energy peak between 1150~K and 1448~K, and (c) peak intensity (left axis) and energy (right axis) as a function of annealing temperature. (d--f) Corresponding results for pixel~(61, 69): (d) hyperspectral PL map after 1250~K annealing, (e) PL spectral evolution, and (f) peak intensity and energy as a function of annealing temperature.}
+    \label{fig:hyper_low_peak}
+\end{figure}
 % Source: CSI 2nd year report (methodology.tex), figure 'hyper_low_peak'.
 %   Chip 3-2, spectral integration window ~1.85 eV (below X_L range).
 %   Pixel (77,72): peak ~1.854 eV at 1250K max. Pixel (61,69): peak ~1.827 eV at 1250K max.
@@ -322,22 +322,22 @@ Spot & \multicolumn{3}{c}{PL (A exciton)} & \multicolumn{3}{c}{Raman $E_{2g}$} \
 
 The strain estimates from PL and Raman are broadly consistent at each spot: Spot~2 yields $\varepsilon_{\mathrm{PL}} \approx 1.07\%$ and $\varepsilon_{E_{2g}} \approx 1.02\%$, while Spot~3 yields $\varepsilon_{\mathrm{PL}} \approx 1.64\%$ and $\varepsilon_{E_{2g}} \approx 1.41\%$. The small discrepancies between the two estimates can be attributed to local doping, defect states, anisotropic stress distributions, or the different sensitivities of the PL and Raman probes to local structural modifications~\cite{wang-2020}. The correlated redshifts of the exciton peak and the $E_{2g}$ phonon mode at Spots~2 and 3 indicate that high-temperature annealing introduces tensile strain of order 1--2\% at localized positions within the flake, simultaneously reducing the optical bandgap and softening the in-plane vibrational modes.
 
-% \begin{figure}[htbp]
-%     \centering
-%     \includegraphics[width=\textwidth]{Figure/Chapter_five/plmap_RT_chip3-5.png}
-%     \caption{Room-temperature PL maps of chip~3-5 (a) before annealing, showing a spatially homogeneous peak energy distribution, and (b) after annealing at 1500~K, revealing significant spatial inhomogeneity in both PL intensity and exciton peak energy.}
-%     \label{fig:plmap_RT_chip3-5}
-% \end{figure}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{Figure/Chapter_five/plmap_RT_chip3-5.png}
+    \caption{Room-temperature PL maps of chip~3-5 (a) before annealing, showing a spatially homogeneous peak energy distribution, and (b) after annealing at 1500~K, revealing significant spatial inhomogeneity in both PL intensity and exciton peak energy.}
+    \label{fig:plmap_RT_chip3-5}
+\end{figure}
 % Source: CSI 2nd year report (methodology.tex), figure 'plmap_RT_chip3-5'.
 %   Chip 3-5, room temperature. 2-panel: (a) before annealing (uniform), (b) after 1500K (inhomogeneous).
 %   Show both PL intensity and peak energy maps if possible.
 
-% \begin{figure}[htbp]
-%     \centering
-%     \includegraphics[width=\textwidth]{Figure/Chapter_five/chip35_spots.png}
-%     \caption{(a) PL map of chip~3-5 after 1500~K annealing with three representative spots indicated. (b) Room-temperature PL spectra at the three spots, showing progressive redshift of the A-exciton peak at Spots~2 and 3 relative to the reference Spot~1. (c) Raman spectra at the same spots under 473~nm laser excitation, showing redshifts of the $E_{2g}$ and $A_{1g}$ modes.}
-%     \label{fig:chip35_spots}
-% \end{figure}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{Figure/Chapter_five/chip35_spots.png}
+    \caption{(a) PL map of chip~3-5 after 1500~K annealing with three representative spots indicated. (b) Room-temperature PL spectra at the three spots, showing progressive redshift of the A-exciton peak at Spots~2 and 3 relative to the reference Spot~1. (c) Raman spectra at the same spots under 473~nm laser excitation, showing redshifts of the $E_{2g}$ and $A_{1g}$ modes.}
+    \label{fig:chip35_spots}
+\end{figure}
 % Source: CSI 2nd year report (methodology.tex), figure 'chip35_spots'.
 %   Chip 3-5. 3-panel figure:
 %   (a) PL map after 1500K annealing with Spots 1, 2, 3 marked.
